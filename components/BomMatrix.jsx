@@ -8,13 +8,14 @@ var LinkHeader         = require('../components/matrix/LinkHeader');
 var DistributorsForBOM = require('../components/matrix/DistributorsForBOM');
 var SelectionOverview  = require('../components/matrix/SelectionOverview');
 var BOMParts           = require('../components/matrix/BOMParts');
+var MatchedTable       = require('../components/matrix/MatchedTable');
+var Cart               = require('../components/matrix/Cart');
 
 var Grid = require('react-bootstrap').Grid; 
 var Row  = require('react-bootstrap').Row;
 var Col  = require('react-bootstrap').Col;
 
 module.exports = React.createClass({
-  displayName: 'BomMatrix',
 
   contextTypes: {
     router: React.PropTypes.func
@@ -75,8 +76,14 @@ module.exports = React.createClass({
             </Col>
           </Row>
           <Row className="show-grid">
-            <Col xs={4}>
+            <Col xs={3}>
               <BOMParts bom_id={this.state.bom_id} />
+            </Col>
+            <Col xs={6}>
+              <MatchedTable bom_id={this.state.bom_id} />
+            </Col>
+            <Col xs={3}>
+              <Cart />
             </Col>
           </Row>
         </Grid>

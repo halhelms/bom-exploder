@@ -7,10 +7,10 @@ var Panel = require('react-bootstrap').Panel;
 var Table = require('react-bootstrap').Table;
 
 // Stores
-var BOMMatcherStore = require('../../stores/BOMMatcherStore');
+var CartStore = require('../../stores/CartStore');
 
 // Actions
-var BOMActions = require('../../actions/BOMActions');
+var CartActions = require('../../actions/CartActions');
 
 module.exports = React.createClass({
 
@@ -32,9 +32,9 @@ module.exports = React.createClass({
 
     render: function(){
       return (
-        <div>
+        <Panel header="My Selections">
         
-        </div>
+        </Panel>
       );
     }
 })

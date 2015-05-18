@@ -1,7 +1,8 @@
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var EventEmitter  = require('events').EventEmitter;
-var BOMConstants  = require('../constants/BOMConstants');
-var assign        = require('../node_modules/object-assign');
+var AppDispatcher   = require('../dispatcher/AppDispatcher');
+var EventEmitter    = require('events').EventEmitter;
+var BOMConstants    = require('../constants/BOMConstants');
+var MatrixConstants = require('../constants/MatrixConstants');
+var assign          = require('../node_modules/object-assign');
 
 
 var CHANGE_EVENT = 'change';
@@ -23,6 +24,10 @@ var BOMMatcherStore = assign({}, EventEmitter.prototype, {
   removeChangeListener: function( callback ) {
     this.removeListener(CHANGE_EVENT, callback);
   },
+
+  getMatches: function() {
+    return this.state.matches;
+  },
 });
 
 
@@ -30,8 +35,9 @@ var BOMMatcherStore = assign({}, EventEmitter.prototype, {
 
 AppDispatcher.register(function(payload){
   switch (payload.action.actionType) {
-    case BOMConstants.FETCHED_MATCHES:
-      BOMStore.setState( {matches: payload.action.matches} );
+    case MatrixConstants.FETCHED_MATCHES:
+      console.log('in BOMMatcherStore:FETCHED_MATCHES');
+      BOMMatcherStore.setState( {matches: payload.action.matches} );
       break;
   }
 });
