@@ -2,6 +2,10 @@
 'use strict'
 var React = require('react');
 
+// Who am I?
+// I receive a distributor. From there, I have to present a the shown part
+// and have the ability to let someone drill down for other parts
+
 // Bootstrap components
 var Panel = require('react-bootstrap').Panel;
 var Table = require('react-bootstrap').Table;
@@ -15,7 +19,12 @@ var MatchActions = require('../../actions/MatchActions');
 module.exports = React.createClass({
 
     getInitialState: function() {
-      return {};
+      return {
+        distributor_name: this.props.distributor.distributor,
+        matched_parts   : this.props.distributor.matched_parts,
+        shown_part      : this.props.distributor.matched_parts[0],
+        bom_part_id     : this.props.bom_part_id
+      };
     },
 
     getDefaultProps: function() {
@@ -31,17 +40,15 @@ module.exports = React.createClass({
     },
 
     render: function(){
-      console.log(this.props.cell);
-      var cell = this.props.cell.matched_parts.map(function(el, i){
-        return (
-          <div>
-            {el.description}
-          </div>
-        );
-      });
+      if (isEmpty(this.state.shown_part) ){return false};
+
       return (
         <div>
-          {cell}
+          {this.state.shown_part.price_per_part}
+          <br />
+          {this.state.shown_part.qoh}
+          <br />
+          {this.state.shown_part.moq}
         </div>
       );
     }

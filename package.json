@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run serve | npm run dev",
+    "serve": "./node_modules/.bin/http-server -p 8080",
+    "dev": "webpack-dev-server --progress --colors --port 8090"
   },
   "author": "Hal Helms",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "react": "^0.13.3"
   },
   "devDependencies": {
@@ -17,11 +20,5 @@
     "node-libs-browser": "^0.5.0",
     "webpack": "^1.9.5",
     "webpack-dev-server": "^1.8.2"
-  },
-  "scripts": {
-    "start": "npm run serve | npm run dev",
-    "serve": "./node_modules/.bin/http-server -p 8080",
-    "dev": "webpack-dev-server --progress --colors --port 8090"
   }
 }
-
