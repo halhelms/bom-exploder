@@ -1,0 +1,387 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Product",
+				"ProductStore"
+			],
+			[
+				"getSt",
+				"getStoreState"
+			],
+			[
+				"objec",
+				"object2"
+			],
+			[
+				"obje",
+				"object1"
+			],
+			[
+				"Fa",
+				"FavoritesStore"
+			],
+			[
+				"pro",
+				"productCatalog"
+			],
+			[
+				"categ",
+				"categoryName"
+			],
+			[
+				"cl",
+				"className"
+			],
+			[
+				"dis",
+				"Distributors"
+			],
+			[
+				"distri",
+				"distributor"
+			],
+			[
+				"ta",
+				"targetQty"
+			],
+			[
+				"targ",
+				"targetQty"
+			],
+			[
+				"tar",
+				"targetPrice"
+			],
+			[
+				"get",
+				"getDefaultProps"
+			],
+			[
+				"distributor-p",
+				"distributor-part-summary-select-icon-wrapper"
+			],
+			[
+				"DistributorPar",
+				"DistributorPartSummaryDrilldownIcon"
+			],
+			[
+				"par",
+				"partNumber"
+			],
+			[
+				"isQ",
+				"isQuoted"
+			],
+			[
+				"quot",
+				"quotedIcon"
+			],
+			[
+				"quotedIc",
+				"quotedIconImageSource"
+			],
+			[
+				"Dist",
+				"DistributorPartSummary"
+			],
+			[
+				"low",
+				"lowestPriceIcon"
+			],
+			[
+				"to",
+				"totalTargetPrice"
+			],
+			[
+				"meta-",
+				"meta-header-detail"
+			],
+			[
+				"meta",
+				"meta-header-detail"
+			],
+			[
+				"dist",
+				"distributorCheckboxes"
+			],
+			[
+				"sort",
+				"sortedDistributors"
+			],
+			[
+				"sor",
+				"sortedDistributors"
+			],
+			[
+				"Distribut",
+				"DistributorCheckbox"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"filt",
+				"filteredDistributors"
+			],
+			[
+				"re",
+				"render"
+			],
+			[
+				"ch",
+				"checked"
+			],
+			[
+				"fil",
+				"filteredTaco"
+			],
+			[
+				"pri",
+				"pricyTacos"
+			],
+			[
+				"mul",
+				"multiplied"
+			],
+			[
+				"mult",
+				"multiplier"
+			],
+			[
+				"del",
+				"delete_all"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: object getInitialState()"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Project: Save As"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/halhelms/bom-exploder"
+	],
+	"file_history":
+	[
+		"/Users/halhelms/Attempt1/scripts/App.js",
+		"/Users/halhelms/Attempt1/scripts/components/Explore.js",
+		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/components/Quiz.jsx",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/utils/PeopleFetcher.js",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/stores/PeopleStore.js",
+		"/Users/halhelms/learning-flux/alt-tutorial/index.html",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/App.jsx",
+		"/Users/halhelms/alt-tutorial/src/stores/FavoritesStore.js",
+		"/Users/halhelms/alt-tutorial/src/components/Quiz.jsx",
+		"/Users/halhelms/alt-tutorial/src/App.jsx",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/utils/GeneralUtils.js",
+		"/Users/halhelms/alt-tutorial/src/utils/GeneralUtils.js",
+		"/Users/halhelms/alt-tutorial/src/components/Locations.jsx",
+		"/Users/halhelms/learning-flux/alt-tutorial/src/actions/PeopleActions.js",
+		"/Users/halhelms/learning-flux/alt-tutorial/package.json",
+		"/Users/halhelms/alt-tutorial/src/actions/LocationActions.js",
+		"/Users/halhelms/alt-tutorial/src/utils/LocationsFetcher.js",
+		"/Users/halhelms/alt-tutorial/src/stores/LocationStore.js",
+		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/halhelms/react-training/learn.html",
+		"/Users/halhelms/learning-flux/alt.js",
+		"/Users/halhelms/learning-flux/stores/LocationStore.js",
+		"/Users/halhelms/learning-flux/components/Locations.jsx",
+		"/Users/halhelms/alt-tutorial/README.md",
+		"/Users/halhelms/learning-flux/actions/LocationActions.js",
+		"/Users/halhelms/Google Drive/BOM-exploder/invariant.js",
+		"/Users/halhelms/Google Drive/BOM-exploder/index.html",
+		"/Users/halhelms/Google Drive/BOM-exploder/dispatcher.js",
+		"/Users/halhelms/react-training/react-training/subjects/02-rendering/exercise.js",
+		"/Users/halhelms/react-training/react-training/subjects/03-components/exercise.js",
+		"/Users/halhelms/Desktop/scratch.html",
+		"/Users/halhelms/rails-apps/test-api/Gemfile",
+		"/Users/halhelms/rails-apps/test-api/app/models/attendance.rb",
+		"/Users/halhelms/rails-apps/test-api/config/database.yml",
+		"/Users/halhelms/rails-apps/chuy/db/migrate/20131208212630_create_chuy_coupons.rb",
+		"/Users/halhelms/rails-apps/chuy/test/dummy/config/database.yml",
+		"/Users/halhelms/rails-apps/chuy/test/dummy/config/routes.rb",
+		"/Users/halhelms/rails-apps/chuy/app/controllers/chuy/coupons_controller.rb",
+		"/Users/halhelms/rails-apps/chuy/config/routes.rb",
+		"/Users/halhelms/rails-apps/chuy/app/models/chuy/company.rb",
+		"/Users/halhelms/rails-apps/chuy/app/models/chuy/coupon.rb",
+		"/Users/halhelms/rails-apps/chuy/Gemfile"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/halhelms/learning-flux/alt-tutorial",
+			"/Users/halhelms/alt-tutorial",
+			"/Users/halhelms/learning-flux/alt-tutorial/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"LocationActions",
+			"clone",
+			"getLocation",
+			"console"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bom-exploder.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 180.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

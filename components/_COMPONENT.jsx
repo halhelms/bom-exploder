@@ -3,29 +3,28 @@
 var React = require('react');
 
 module.exports = React.createClass({
-    displayName: 'GoodbyeReact',
 
-    getInitialState: function() {
-      return {};
-    },
+  getInitialState: function() {
+    return {};
+  },
 
-    getDefaultProps: function() {
-      return {};
-    },
+  getDefaultProps: function() {
+    return {};
+  },
 
-    componentDidMount: function() {
+  componentDidMount: function() {
 
-    },
+  },
 
-    componentDidUnmount: function() {
+  componentDidUnmount: function() {
 
-    },
+  },
 
-    render: function(){
-      return (
-        <div className="">
-        
-        </div>
-      );
-    }
+  render: function(){
+    return (
+      <div className="">
+      
+      </div>
+    );
+  }
 })

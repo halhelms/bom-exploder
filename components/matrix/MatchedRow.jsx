@@ -39,7 +39,6 @@ module.exports = React.createClass({
     },
 
     render: function(){
-      console.log(this.props.bom_part.distributors);
       var cells = this.props.bom_part.distributors.map(function(distributor, i){
         return(
           <MatchedCell distributor={distributor} bom_part_id={this.props.bom_part.bom_part_id} />

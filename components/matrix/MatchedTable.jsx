@@ -37,7 +37,6 @@ module.exports = React.createClass({
     },
 
     componentWillMount: function() {
-      console.log('componentWillMount');
       MatrixActions.getBOMMatches(this.props.bom_id);
     },
 
