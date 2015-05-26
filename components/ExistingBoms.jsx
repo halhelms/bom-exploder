@@ -1,13 +1,17 @@
 /** @jsx React.DOM */
+
+// I show the user all the existing BOMs they have
+
 'use strict'
 var React      = require('react');
-
+// Actions
 var BOMActions = require('../actions/BOMActions');
+// Stores
 var BOMStore   = require('../stores/BOMStore');
-
+// Bootstrap components
 var Table = require('react-bootstrap').Table;
 
-module.exports = React.createClass({
+var ExistingBoms = React.createClass({
   getInitialState: function() {
     return {boms: []};
   },
@@ -68,4 +72,6 @@ module.exports = React.createClass({
       </div>
     );
   },
-})
+});
+
+module.exports = ExistingBoms;

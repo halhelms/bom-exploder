@@ -1,14 +1,18 @@
 /** @jsx React.DOM */
+
+// I am a header menu that links to the user's account and their BOMs
+
 'use strict'
 var React   = require('react');
 
+// Router components
 var Router  = require('react-router');
 var Link    = Router.Link;
-
+// Bootstrap components
 var Nav     = require('react-bootstrap').Nav;
 var NavItem = require('react-bootstrap').NavItem;
 
-module.exports = React.createClass({
+var LinkHeader = React.createClass({
 
   render: function(){
     return (
@@ -18,4 +22,6 @@ module.exports = React.createClass({
       </Nav>
     );
   }
-})
+});
+
+module.exports = LinkHeader;

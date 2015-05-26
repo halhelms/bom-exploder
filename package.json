@@ -1,6 +1,6 @@
 {
-  "name": "BOM Exploder",
-  "version": "0.010",
+  "name": "BOM_Exploder",
+  "version": "0.12.2",
   "description": "",
   "main": "index.js",
   "scripts": {

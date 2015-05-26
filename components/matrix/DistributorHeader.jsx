@@ -1,8 +1,11 @@
 /** @jsx React.DOM */
+
+// I am a simple component that displays a distributor's name in the matrix section
+
 'use strict'
 var React = require('react');
 
-module.exports = React.createClass({
+var DistributorHeader = React.createClass({
 
     shouldComponentUpdate: function() {
       return false;
@@ -16,3 +19,5 @@ module.exports = React.createClass({
       );
     }
 })
+
+module.exports = DistributorHeader;

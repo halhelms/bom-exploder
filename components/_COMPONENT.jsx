@@ -2,7 +2,13 @@
 'use strict'
 var React = require('react');
 
-module.exports = React.createClass({
+// React components
+
+// Stores
+
+// Actions
+
+var ComponentName = React.createClass({
 
   getInitialState: function() {
     return {};
@@ -28,3 +34,5 @@ module.exports = React.createClass({
     );
   }
 })
+
+module.exports = ComponentName;

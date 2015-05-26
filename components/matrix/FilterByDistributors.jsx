@@ -1,15 +1,17 @@
 /** @jsx React.DOM */
+
+// I let the user determine whether they want to use any filters whatsoever
+
 'use strict'
 var React = require('react');
-
+// React components
+var AllQuoting = require('./AllQuoting');
+var Checkbox = require('../foundation/Checkbox');
 // Bootstrap components
 var Rb = require('react-bootstrap');
 var Label = Rb.Label;
 
-var AllQuoting = require('./AllQuoting');
-var Checkbox = require('./Checkbox');
-
-module.exports = React.createClass({
+var FilterByDistributors = React.createClass({
 
   getInitialState: function() {
     return {checked: true};
@@ -33,4 +35,6 @@ module.exports = React.createClass({
       </div>
     );
   }
-})
+});
+
+module.exports = FilterByDistributors;

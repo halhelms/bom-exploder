@@ -21,13 +21,20 @@ var Route        = Router.Route;
 var RouteHandler = Router.RouteHandler;
 
 // Stores
-var LoginStore   = require('./stores/LoginStore');
-var BOMStore     = require('./stores/BOMStore');
+var LoginStore        = require('./stores/LoginStore');
+var BOMStore          = require('./stores/BOMStore');
+var DistributorsStore = require('./stores/DistributorsStore');
 
 // Globals
 window.API       = "http://private-1a4bb-bomexploder.apiary-mock.com/apiblueprint.org/";
+// Actions
+var DistributorsActions = require('./actions/DistributorsActions');
 
 var App = React.createClass({
+  componentWillMount: function() {
+    DistributorsActions.fetchDistributors();
+  },
+
   render: function () {
     return (
       <div>

@@ -4,7 +4,6 @@ var React = require('react');
 
 // Bootstrap components
 var Panel = require('react-bootstrap').Panel;
-var Table = require('react-bootstrap').Table;
 
 // Stores
 var ???Store = require('../../stores/???Store');
@@ -12,7 +11,7 @@ var ???Store = require('../../stores/???Store');
 // Actions
 var ???Actions = require('../../actions/???Actions');
 
-module.exports = React.createClass({
+var ComponentName = React.createClass({
 
     getInitialState: function() {
       return {};
@@ -38,3 +37,5 @@ module.exports = React.createClass({
       );
     }
 })
+
+module.exports = ComponentName;
