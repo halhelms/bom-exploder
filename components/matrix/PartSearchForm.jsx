@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 
 // I'm a humble soul -- I just let people search for parts
 
@@ -7,7 +7,7 @@ var React = require('react');
 
 var PartSearchForm = React.createClass({
 
-  render: function(){
+  render() {
     return (
       <div className="part-search-form">
         <input type="text" id="part-search" placeholder="Search for Part Number" />

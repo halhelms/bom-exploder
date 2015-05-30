@@ -1,7 +1,7 @@
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var MatchConstants  = require('../constants/MatchConstants');
-var APIutils      = require('../utils/APIutils');
-var $             = require('jquery');
+var AppDispatcher  = require('../dispatcher/AppDispatcher');
+var MatchConstants = require('../constants/MatchConstants');
+var APIutils       = require('../utils/APIutils');
+var $              = require('jquery');
 
 var MatchActions = {
 

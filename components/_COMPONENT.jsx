@@ -1,38 +1,42 @@
-/** @jsx React.DOM */
 'use strict'
 var React = require('react');
+var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
-// React components
+// BOOTSTRAP COMPONENTS
+// var Panel = require('react-bootstrap').Panel;
+// STORES
+// var ???Store = require('../../stores/???Store');
+// ACTIONS
+// var ???Actions = require('../../actions/???Actions');
+// REACT COMPONENTS
 
-// Stores
 
-// Actions
+var ???ComponentName = React.createClass({
+    mixins: [PureRenderMixin],
 
-var ComponentName = React.createClass({
+    getInitialState() {
+      return {};
+    },
 
-  getInitialState: function() {
-    return {};
-  },
+    getDefaultProps() {
+      return {};
+    },
 
-  getDefaultProps: function() {
-    return {};
-  },
+    componentDidMount() {
 
-  componentDidMount: function() {
+    },
 
-  },
+    componentDidUnmount() {
 
-  componentDidUnmount: function() {
+    },
 
-  },
-
-  render: function(){
-    return (
-      <div className="">
-      
-      </div>
-    );
-  }
+    render() {
+      return (
+        <div>
+        
+        </div>
+      );
+    }
 })
 
-module.exports = ComponentName;
+module.exports = ???ComponentName;

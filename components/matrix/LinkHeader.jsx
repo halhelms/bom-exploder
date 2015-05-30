@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 
 // I am a header menu that links to the user's account and their BOMs
 
@@ -14,7 +14,7 @@ var NavItem = require('react-bootstrap').NavItem;
 
 var LinkHeader = React.createClass({
 
-  render: function(){
+  render() {
     return (
       <Nav bsStyle='pills'>
         <NavItem><Link to="account">My Account</Link></NavItem>

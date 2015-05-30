@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 
 // I am a simple component that displays a distributor's name in the matrix section
 
@@ -7,11 +7,11 @@ var React = require('react');
 
 var DistributorHeader = React.createClass({
 
-    shouldComponentUpdate: function() {
+    shouldComponentUpdate() {
       return false;
     },
 
-    render: function(){
+    render() {
       return (
         <span>
           {this.props.name}

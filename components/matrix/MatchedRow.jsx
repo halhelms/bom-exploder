@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 
 // I hold the cells for a results row based on a BOM part
 
@@ -8,14 +8,13 @@ var React = require('react');
 // React components
 var MatchedCell  = require('./MatchedCell');
 // Bootstrap components
-var Panel        = require('react-bootstrap').Panel;
-var Table        = require('react-bootstrap').Table;
+
 // Actions
 var MatchActions = require('../../actions/MatchActions');
 
 var MatchedRow = React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       bom_part_number: this.props.bom_part.bom_part_number,
       bom_part_id    : this.props.bom_part.bom_part_id,
@@ -24,25 +23,13 @@ var MatchedRow = React.createClass({
     };
   },
 
-  getDefaultProps: function() {
-    return {};
-  },
+  render() {
 
-  componentDidMount: function() {
-
-  },
-
-  componentDidUnmount: function() {
-
-  },
-
-  render: function(){
     var cells = this.props.bom_part.distributors.map(function(distributor, i){
       return(
-        <MatchedCell distributor={distributor} bom_part_id={this.props.bom_part.bom_part_id} />
+        <MatchedCell distributor={distributor} bom_part_id={this.props.bom_part.bom_part_id} key={i} />
       );
     }, this);
-
     return (
       <div>
         {cells}

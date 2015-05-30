@@ -1,4 +1,4 @@
-/** @jsx React.DOM */
+
 
 // I am a foundational checkbox. I'm needed because of the bizarre way HTML handles the 'checked' attribute
 

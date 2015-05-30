@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 // I am the wrapper for displaying BOM parts and the matching parts from the distributors
 
 'use strict'
@@ -28,7 +26,7 @@ var BomMatrix = React.createClass({
     router: React.PropTypes.func
   },
 
-  getInitialState: function() {
+  getInitialState() {
     return (
       {
         bom_id: this.context.router.getCurrentParams().bom_id,
@@ -37,16 +35,16 @@ var BomMatrix = React.createClass({
     );
   },
 
-  onBOMStoreChange: function() {
+  onBOMStoreChange() {
     // put the store's BOM in our state
     this.setState({bom: BOMStore.getBOM()});
   },
 
-  onDistributorsStoreChange: function() {
+  onDistributorsStoreChange() {
     console.log('The DistributorsStore state has changed');
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     // let the store know we want to hear about changes
     BOMStore.addChangeListener(this.onBOMStoreChange);
     // get BOM from store
@@ -60,11 +58,11 @@ var BomMatrix = React.createClass({
     }
   },
 
-  componentDidUnmount: function() {
+  componentDidUnmount() {
     BOMStore.removeChangeListener(this.onBOMStoreChange);
   },
 
-  render: function(){
+  render() {
     return (
       <Grid>
         <Row className="show-grid"> 

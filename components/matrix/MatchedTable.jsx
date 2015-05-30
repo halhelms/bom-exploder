@@ -1,4 +1,3 @@
-/** @jsx React.DOM */
 
 // I hold the matching distributor parts for BOM parts
 
@@ -8,6 +7,7 @@ var React = require('react');
 // React components
 var MatchedRow          = require('./MatchedRow');
 var DistributorHeader   = require('./DistributorHeader');
+var DistributorMatch    = require('./DistributorMatch');
 // Bootstrap components
 var Panel               = require('react-bootstrap').Panel;
 var Table               = require('react-bootstrap').Table;
@@ -19,48 +19,48 @@ var DistributorsStore   = require('../../stores/DistributorsStore');
 var MatrixActions       = require('../../actions/MatrixActions');
 var DistributorsActions = require('../../actions/DistributorsActions');
 
-MatchedTable = React.createClass({
+var MatchedTable = React.createClass({
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       matches: {},
       distributors: []
     };
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {bom_id: 0};
   },
 
-  onBOMStoreChange: function() {
+  onBOMStoreChange() {
     this.setState({distributors: BOMStore.getDistributorsForBOM()});
     this.setState({meta_info: this.state.matches.meta_info});
   },
 
-  onBOMMatcherStoreChange: function() {
+  onBOMMatcherStoreChange() {
     this.setState({matches: BOMMatcherStore.getMatches()});
   },
 
-  onDistributorsStoreChange: function() {
+  onDistributorsStoreChange() {
     
   },
 
-  componentWillMount: function() {
+  componentWillMount() {
     MatrixActions.getBOMMatches(this.props.bom_id);
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     BOMMatcherStore.addChangeListener(this.onBOMMatcherStoreChange);
     BOMStore.addChangeListener(this.onBOMStoreChange);
     DistributorsStore.addChangeListener(this.onDistributorsStoreChange);
     DistributorsActions.fetchDistributorsForBOM(this.props.bom_id);
   },
 
-  componentDidUnmount: function() {
+  componentDidUnmount() {
     BOMMatcherStore.removeChangeListener(this.onStoreChange);
   },
 
-  render: function(){
+  render() {
     if (isEmpty(this.state.matches) || isEmpty(this.state.distributors)) {return false};
 
     var distributors = this.state.distributors.map(function(distributor, i) {
@@ -79,7 +79,6 @@ MatchedTable = React.createClass({
       <Panel header="Distributor Matches">
         {distributors}
         <br />
-        {rows}
       </Panel>
     );
   }
