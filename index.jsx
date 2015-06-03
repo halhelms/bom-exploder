@@ -1,30 +1,34 @@
 
 'use strict'
 
-var React               = require('react');
+var React        = require('react');
 
-// COMPONENTS
-var Header              = require('./components/header/Header');
-var Footer              = require('./components/footer/Footer');
-var TestPage            = require('./components/pages/TestPage');
-var ResultsWorksheetPage= require('./components/pages/ResultsWorksheetPage');
-// var ExistingBoms        = require('/components/account/ExistingBoms');
-// var BomMatrix        = require('./components/BomMatrix');
-// var Account          = require('./components/Account');
+// REACT COMPONENTS
+var Header       = require('./source/js/components/header/index');
+var Footer       = require('./source/js/components/footer/index');
+var BomIndex     = require('./source/js/components/boms/index');
+
+var Results      = require('./source/js/components/results/index');
+var Account      = require('./source/js/components/account/index');
+
+// var BomMatrix = require('./components/BomMatrix');
+// var Account   = require('./components/Account');
 // ROUTING
-var Router              = require('react-router');
-var DefaultRoute        = Router.DefaultRoute;
-var Link                = Router.Link;
-var Route               = Router.Route;
-var RouteHandler        = Router.RouteHandler;
+var Router       = require('react-router');
+var DefaultRoute = Router.DefaultRoute;
+var Link         = Router.Link;
+var Route        = Router.Route;
+var RouteHandler = Router.RouteHandler;
 // STORES
 // var BOMStore            = require('./stores/BOMStore');
-// var DistributorsStore   = require('./stores/DistributorsStore');
+// var DistributorsStore   = require('/Users/halhelms/bom-exploder/stores/DistributorsStore');
 // GLOBALS
-// window.API              = "http://private-1a4bb-bomexploder.apiary-mock.com/apiblueprint.org/";
+window.API              = "http://private-1a4bb-bomexploder.apiary-mock.com/apiblueprint.org/";
+// global.__base = __dirname + '/';
 // ACTIONS
-// var DistributorsActions = require('./actions/DistributorsActions');
+// var DistributorsActions = require('/Users/halhelms/bom-exploder/actions/DistributorsActions');
 
+// The App component needs to go BEFORE the routes
 var App = React.createClass({
   componentWillMount() {
     // DistributorsActions.fetchDistributors();
@@ -41,13 +45,14 @@ var App = React.createClass({
   }
 });
 
+
+// The routes need to go AFTER the App
 var routes = (
-  <Route name="app" path="/" handler={App}>
-    <Route name="Header" handler={Header} />
-    <Route name="Footer" handler={Footer} />
-    <Route name="TestPage" handler={TestPage} />
-    <Route name="ResultsWorksheetPage" handler={ResultsWorksheetPage} />
-    <DefaultRoute handler ={TestPage}/>
+    <Route name="app" path="/" handler={App}>
+    <Route name           ="results/:bom_id" handler={Results} />
+    <Route name           ="account" handler={Account} />
+    <Route name           ="boms" handler={BomIndex} />
+    <DefaultRoute handler ={BomIndex}/>
   </Route>
 );
 
