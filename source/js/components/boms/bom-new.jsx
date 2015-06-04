@@ -11,7 +11,7 @@ var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 // REACT COMPONENTS
 
 
-var ???ComponentName = React.createClass({
+var BomNew = React.createClass({
     mixins: [PureRenderMixin],
 
     getInitialState() {
@@ -39,4 +39,4 @@ var ???ComponentName = React.createClass({
     }
 })
 
-module.exports = ???ComponentName;
+module.exports = BomNew;

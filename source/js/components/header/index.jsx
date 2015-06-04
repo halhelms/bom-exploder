@@ -10,8 +10,11 @@ var Header = React.createClass({
   render() {
     return (
       <div className="header">
-        <Link to="account">My Account</Link>{' '} 
-        <Link to="boms">My BOMs</Link>
+        <div className="col-md-8" />
+        <div className="col-md-4">
+          <Link to="account">My Account</Link>{' '} | {' '}
+          <Link to="boms">My BOMs</Link>
+        </div>
       </div>
     );
   }

@@ -7,9 +7,12 @@ var React        = require('react');
 var Header       = require('./source/js/components/header/index');
 var Footer       = require('./source/js/components/footer/index');
 var BomIndex     = require('./source/js/components/boms/index');
+var NewBom       = require('./source/js/components/boms/bom-new');
 
 var Results      = require('./source/js/components/results/index');
 var Account      = require('./source/js/components/account/index');
+
+var BOMConstants = require('./source/js/constants/bom-constants');
 
 // var BomMatrix = require('./components/BomMatrix');
 // var Account   = require('./components/Account');
@@ -39,7 +42,6 @@ var App = React.createClass({
       <div>
         <Header/>
         <RouteHandler/>
-        <Footer/>
       </div>
     );
   }
@@ -52,6 +54,7 @@ var routes = (
     <Route name           ="results/:bom_id" handler={Results} />
     <Route name           ="account" handler={Account} />
     <Route name           ="boms" handler={BomIndex} />
+    <Route name = "new-bom" handler={NewBom} />
     <DefaultRoute handler ={BomIndex}/>
   </Route>
 );

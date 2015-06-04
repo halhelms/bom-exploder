@@ -1,7 +1,7 @@
 'use strict'
 var React = require('react');
 // React components
-
+var BomList = require('./bom-list');
 // Bootstrap components
 
 var BomIndex = React.createClass({
@@ -25,7 +25,7 @@ var BomIndex = React.createClass({
     render() {
       return (
         <div>
-          <h1>Existing BOMs</h1>
+          <BomList />
         </div>
       );
     }

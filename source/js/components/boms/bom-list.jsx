@@ -2,8 +2,8 @@
 var React = require('react');
 var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
+var Router       = require('react-router');
+var Link         = Router.Link;
 // STORES
 // var ???Store = require('../../stores/???Store');
 // ACTIONS
@@ -32,8 +32,11 @@ var BomList = React.createClass({
 
     render() {
       return (
-        <div>
-        
+        <div className="col-md-12">
+          <div className="h1 col-md-10 text-center">My BOMs</div>
+          <div className="col-md-2">
+            <Link to="new-bom">Create New BOM</Link>
+          </div>
         </div>
       );
     }
