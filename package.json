@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run serve | npm run watch",
-    "serve": "http-server -a localhost -p 8080",
+    "start": "npm run serve | npm run dev",
+    "serve": "./node_modules/.bin/http-server -p 8080",
+    "dev": "webpack-dev-server --progress --colors --port 8090",
     "watch": "webpack --watch"
   },
   "author": "Hal Helms",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0",
+    "webpack-dev-server": "^1.9.0",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.0",
     "react-hot-loader": "^1.2.7",

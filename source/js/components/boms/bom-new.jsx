@@ -9,7 +9,7 @@ var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 // ACTIONS
 // var ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
-
+var BomAdd = require('./bom-add');
 
 var BomNew = React.createClass({
     mixins: [PureRenderMixin],
@@ -32,8 +32,9 @@ var BomNew = React.createClass({
 
     render() {
       return (
-        <div>
-        
+        <div className='panel panel-primary'>
+          <div className='panel-heading text-center h1'>New Project Details</div>
+          <BomAdd bom_id='0' mode='add' />
         </div>
       );
     }

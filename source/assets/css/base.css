@@ -1,0 +1,18 @@
+.fa-quote-left{
+  margin-right: 6px;
+  color: green;
+}
+
+.glyphicon-cloud-upload{
+  margin-right: 6px;
+  margin-left: 6px;
+  font-size: x-large;
+}
+
+.file-upload-button{
+  margin-left: 6px;
+}
+
+.btn-lg{
+  width: 150px;
+}
