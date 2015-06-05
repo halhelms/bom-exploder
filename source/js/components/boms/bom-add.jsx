@@ -2,6 +2,9 @@
 var React = require('react');
 var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
+// React Router
+var Router       = require('react-router');
+var Link         = Router.Link;
 // BOOTSTRAP COMPONENTS
 // var Panel = require('react-bootstrap').Panel;
 // STORES
@@ -57,7 +60,7 @@ var BomAdd = React.createClass({
                   <textarea rows='8' className='form-control' id='paste-upload' placeholder='BOM Parts' />
                 </div>
                 <div className='form-group text-right'>
-                  <button type='button' className='btn btn-default btn-lg'>Cancel</button> <button type='button' className='btn btn-primary btn-lg'>OK</button>
+                  <Link to="part-mapper"><button type='button' className='btn btn-default btn-lg'>Cancel</button> <button type='button' className='btn btn-primary btn-lg'>OK</button></Link>
                 </div>
               </form>
             </div>

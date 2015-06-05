@@ -16,3 +16,12 @@
 .btn-lg{
   width: 150px;
 }
+
+ul.bom-list{
+  list-style-type: square;    
+}
+
+.fa-columns{
+  margin-right: 6px;
+  margin-bottom: 6px;
+}

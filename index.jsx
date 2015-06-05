@@ -8,9 +8,11 @@ var Header       = require('./source/js/components/header/index');
 var Footer       = require('./source/js/components/footer/index');
 var BomIndex     = require('./source/js/components/boms/index');
 var NewBom       = require('./source/js/components/boms/bom-new');
+var PartMapper   = require('./source/js/components/boms/part-mapper/index');
+var Account      = require('./source/js/components/account/index');
 
 var Results      = require('./source/js/components/results/index');
-var Account      = require('./source/js/components/account/index');
+
 
 var BOMConstants = require('./source/js/constants/bom-constants');
 
@@ -54,7 +56,8 @@ var routes = (
     <Route name           ="results/:bom_id" handler={Results} />
     <Route name           ="account" handler={Account} />
     <Route name           ="boms" handler={BomIndex} />
-    <Route name = "new-bom" handler={NewBom} />
+    <Route name="new-bom" handler={NewBom} />
+    <Route name="part-mapper" handler={PartMapper} />
     <DefaultRoute handler ={BomIndex}/>
   </Route>
 );
