@@ -1,27 +1,81 @@
-.fa-quote-left{
+/*body {
+  font-family: 'Gudea';
+  font-size: 2em;
+}*/
+
+/*.panel {
+  padding-top: 6px;
+}*/
+
+.container, .container-fluid {
+  padding-top: 16px;
+}
+
+.fa-quote-left {
   margin-right: 6px;
   color: green;
 }
 
-.glyphicon-cloud-upload{
+.glyphicon-cloud-upload {
   margin-right: 6px;
   margin-left: 6px;
   font-size: x-large;
 }
 
-.file-upload-button{
+.file-upload-button {
   margin-left: 6px;
 }
 
-.btn-lg{
+.btn-lg {
   width: 150px;
 }
 
-ul.bom-list{
+ul.bom-list {
   list-style-type: square;    
 }
 
-.fa-columns{
+.fa-columns {
   margin-right: 6px;
   margin-bottom: 6px;
+}
+
+li.inactive {
+ color: silver;
+}
+
+.fa-user-plus {
+  margin-right: 6px;
+}
+
+.h1 {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.push-right-6 {
+  margin-left: 6px;
+}
+
+div.inline {
+  display: inline-block;
+  margin-right: 12px;
+  vertical-align: top;
+}
+
+label.light {
+  font-weight: normal;
+}
+
+.bordered {
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black
+}
+
+.with-padding-6 {
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
+  margin-right: 6px;
 }

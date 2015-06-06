@@ -1,6 +1,5 @@
 'use strict'
 var React = require('react');
-var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 // BOOTSTRAP COMPONENTS
 // var Panel = require('react-bootstrap').Panel;
@@ -10,44 +9,71 @@ var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 // ACTIONS
 // var ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
-// var DistributorsFilter = require('/Users/halhelms/bom-exploder/components/distributor_filters/DistributorsFilter');
+var FilterDistributors       = require('./distributor-filters/filter-distributors');
+var FilterAll                = require('./distributor-filters/filter-all');
+var FilterQuoting            = require('./distributor-filters/filter-quoting');
+var FilterSelectDistributors = require('./distributor-filters/filter-select-distributors');
+var HighlightLowestPrice     = require('./distributor-filters/highlight-lowest-price');
+var HighlightQuotedPrice     = require('./distributor-filters/highlight-quoted-price');
+var HideSelectedParts        = require('./distributor-filters/hide-selected-parts');
+var SelectionOverviewIndex   = require('./selection-overview/index');
 
 var Results = React.createClass({
-    mixins: [PureRenderMixin],
+  getDefaultProps() {
+    return (
+      {
+        bom_name: "iPhone 6 Charging Stand",
+        bom_id: 0
+      }
+    );
+  },
 
-    contextTypes: {
-      router: React.PropTypes.func
-    },
-
-    getInitialState() {
-      return (
-        {
-          bom_id: this.context.router.getCurrentParams().bom_id,
-          bom_name: "not provided"
-        }
-      );
-    },
-
-    getDefaultProps() {
-      return {};
-    },
-
-    componentDidMount() {
-      // BOMMatcherStore.
-      // this.setState({bom_name: BOMStore.getBOMName(this.state.bom_id)});
-    },
-
-    componentDidUnmount() {
-
-    },
-
-    render() {
-      return (
-        <div>
-          Results: {this.state.bom_name}
+  render() {
+    return (
+      <div className='panel panel-primary padding'>
+        <div className='panel-heading text-center h1'>Your BOM Part Matches</div>
+        
+        <div className='row panel-body'>
+          <div className='col-md-12 text-center h3'>
+            BOM: {this.props.bom_name}
+          </div>
         </div>
-      );
-    }
-})
+      
+        <div className='row panel-body'>
+          <div className='col-md-9'>
+            <div className='well'>
+              <FilterDistributors />
+              <div>
+                <div className='inline push-right-6'>
+                  <FilterAll />
+                  <FilterQuoting />
+                </div>
+                <div className='inline'>
+                  <FilterSelectDistributors />
+                </div>
+              </div>
+
+              <div className='inline'>
+                <HighlightLowestPrice />
+                <HighlightQuotedPrice />
+              </div>
+              <div className='inline'>
+                <HideSelectedParts />
+              </div>
+            </div>
+          </div>
+
+          <div className='col-md-3'>
+            <div className='well'>
+              <SelectionOverviewIndex />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    );
+  }
+});
 
 module.exports = Results;

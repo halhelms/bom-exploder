@@ -12,7 +12,7 @@ var Header = React.createClass({
       <div className="header">
         <div className="col-md-8" />
         <div className="col-md-4">
-          <Link to="account">My Account</Link>{' '} | {' '}
+          <Link to="contact-info">My Account</Link>{' '} | {' '}
           <Link to="boms">My BOMs</Link>
         </div>
       </div>

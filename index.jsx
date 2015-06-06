@@ -4,17 +4,16 @@
 var React        = require('react');
 
 // REACT COMPONENTS
-var Header       = require('./source/js/components/header/index');
-var Footer       = require('./source/js/components/footer/index');
-var BomIndex     = require('./source/js/components/boms/index');
-var NewBom       = require('./source/js/components/boms/bom-new');
-var PartMapper   = require('./source/js/components/boms/part-mapper/index');
-var Account      = require('./source/js/components/account/index');
+var Header              = require('./source/js/components/header/index');
+var Footer              = require('./source/js/components/footer/index');
+var BomIndex            = require('./source/js/components/boms/index');
+var NewBom              = require('./source/js/components/boms/bom-new');
+var PartMapper          = require('./source/js/components/boms/part-mapper/index');
+var ContactInfo         = require('./source/js/components/account/contact-info/index');
+var DistributorSettings = require('./source/js/components/account/distributor-settings/index');
+var Results             = require('./source/js/components/results/index');
 
-var Results      = require('./source/js/components/results/index');
 
-
-var BOMConstants = require('./source/js/constants/bom-constants');
 
 // var BomMatrix = require('./components/BomMatrix');
 // var Account   = require('./components/Account');
@@ -52,13 +51,14 @@ var App = React.createClass({
 
 // The routes need to go AFTER the App
 var routes = (
-    <Route name="app" path="/" handler={App}>
-    <Route name           ="results/:bom_id" handler={Results} />
-    <Route name           ="account" handler={Account} />
-    <Route name           ="boms" handler={BomIndex} />
-    <Route name="new-bom" handler={NewBom} />
-    <Route name="part-mapper" handler={PartMapper} />
-    <DefaultRoute handler ={BomIndex}/>
+  <Route name             ="app" path="/"         handler={App}>
+    <Route name           ="results"              handler={Results} />
+    <Route name           ="boms"                 handler={BomIndex} />
+    <Route name           ="new-bom"              handler={NewBom} />
+    <Route name           ="contact-info"         handler={ContactInfo} />
+    <Route name           ="distributor-settings" handler={DistributorSettings} />
+    <Route name           ="part-mapper"          handler={PartMapper} />
+    <DefaultRoute                                 handler={BomIndex} />
   </Route>
 );
 
