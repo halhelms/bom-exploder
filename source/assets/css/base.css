@@ -79,3 +79,79 @@ label.light {
   margin-top: 6px;
   margin-right: 6px;
 }
+
+.bom-part-header-left {
+  background-color: #0099FF;
+  border-collapse: collapse;
+  border-top: 1px solid navy;
+  border-bottom: 1px solid navy;
+  border-right: 1px solid navy;
+  border-left: 1px solid navy;
+  min-width: 60%;
+  margin-right: -5%;
+  color: #fefbf6;
+}
+.bom-part-header-right {
+  background-color: #0099FF;
+  border-collapse: collapse;
+  border-top: 1px solid navy;
+  border-bottom: 1px solid navy;
+  border-right: 1px solid navy;
+  border-left: 1px solid navy;
+  min-width: 30%;
+  margin-left: -5%;
+  color: #fefbf6;
+}
+
+.bom-part-left {
+  border-collapse: collapse;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  border-left: 1px solid silver;
+  min-width: 60%;
+  margin-right: -5%;
+  padding-left: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+} 
+
+.bom-part-right {
+  border-collapse: collapse;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  border-left: 1px solid silver;
+  min-width: 30%;
+  margin-left: -5%;
+  padding-right: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.matched-part-header {
+  background-color: #0099FF;
+  border-collapse: collapse;
+  border-top: 1px solid navy;
+  border-bottom: 1px solid navy;
+  border-right: 1px solid navy;
+  border-left: 1px solid navy;
+  min-width: 95%;
+  margin-right: -5%;
+  margin-left: -5%;
+  color: #fefbf6;
+}
+
+.matched-part {
+  border-collapse: collapse;
+  border-top: 1px solid silver;
+  border-bottom: 1px solid silver;
+  border-right: 1px solid silver;
+  border-left: 1px solid silver;
+  min-width: 95%;
+  margin-right: -5%;
+  margin-left: -5%; 
+  padding-left: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+} 

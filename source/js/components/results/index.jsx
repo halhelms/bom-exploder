@@ -17,6 +17,8 @@ var HighlightLowestPrice     = require('./distributor-filters/highlight-lowest-p
 var HighlightQuotedPrice     = require('./distributor-filters/highlight-quoted-price');
 var HideSelectedParts        = require('./distributor-filters/hide-selected-parts');
 var SelectionOverviewIndex   = require('./selection-overview/index');
+var BomPartsIndex            = require('./bom-parts/index');
+var MatchedPartsIndex        = require('./matched-parts/index');
 
 var Results = React.createClass({
   getDefaultProps() {
@@ -69,6 +71,17 @@ var Results = React.createClass({
             </div>
           </div>
 
+        </div>
+
+        <div className='row panel-body'>
+          <div className='col-md-3 bordered'>
+            <BomPartsIndex />
+          </div>
+
+          <div className='col-md-9 bordered'>
+            Matches
+
+          </div>
         </div>
 
       </div>
