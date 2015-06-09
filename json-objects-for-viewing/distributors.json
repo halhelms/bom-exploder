@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1111",
+    "name": "Allied",
+    "show": "true",
+    "results_matched": "54"
+  },
+  {
+    "id": "1112",
+    "name": "Arrow",
+    "show": "true",
+    "results_matched": "23"
+  },
+  {
+    "id": "1113",
+    "name": "AvNet",
+    "show": "true",
+    "results_matched": "36"
+  },
+  {
+    "id": "1114",
+    "name": "Digikey",
+    "show": "true",
+    "results_matched": "19"
+  },
+  {
+    "id": "1115",
+    "name": "element",
+    "show": "true",
+    "results_matched": "31"
+  },
+  {
+    "id": "1116",
+    "name": "Farnell",
+    "show": "true",
+    "results_matched": "42"
+  },
+  {
+    "id": "1117",
+    "name": "Future",
+    "show": "true",
+    "results_matched": "17"
+  },
+  {
+    "id": "1118",
+    "name": "Grainger",
+    "show": "true",
+    "results_matched": "13"
+  },
+  {
+    "id": "1119",
+    "name": "Heilind",
+    "show": "true",
+    "results_matched": "51"
+  },
+  {
+    "id": "1120",
+    "name": "Master",
+    "show": "true",
+    "results_matched": "43"
+  },
+  {
+    "id": "1121",
+    "name": "Mouser",
+    "show": "true",
+    "results_matched": "61"
+  },
+  {
+    "id": "1122",
+    "name": "Newark",
+    "show": "true",
+    "results_matched": "57"
+  },
+  {
+    "id": "1123",
+    "name": "PEI Genesis",
+    "show": "true",
+    "results_matched": "18"
+  },
+  {
+    "id": "1124",
+    "name": "Powell",
+    "show": "true",
+    "results_matched": "12"
+  },
+  {
+    "id": "1125",
+    "name": "RS Components",
+    "show": "true",
+    "results_matched": "9"
+  },
+  {
+    "id": "1126",
+    "name": "Rutronik",
+    "show": "true",
+    "results_matched": "16"
+  },
+  {
+    "id": "1127",
+    "name": "Sager",
+    "show": "true",
+    "results_matched": "34"
+  },
+  {
+    "id": "1128",
+    "name": "TTI",
+    "show": "true",
+    "results_matched": "22"
+  },
+  {
+    "id": "1129",
+    "name": "Verical",
+    "show": "true",
+    "results_matched": "6"
+  },
+  {
+    "id": "1130",
+    "name": "Zoro",
+    "show": "true",
+    "results_matched": "19"
+  }
+]

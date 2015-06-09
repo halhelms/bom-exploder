@@ -24,7 +24,6 @@ var DistributorSettings = React.createClass({
 
     addRep() {
       this.setState({last_id: this.state.last_id + 1});
-      console.log(this.state.last_id);
     },
 
     render() {

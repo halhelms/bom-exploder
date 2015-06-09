@@ -41,7 +41,6 @@ var BomMatrix = React.createClass({
   },
 
   onDistributorsStoreChange() {
-    console.log('The DistributorsStore state has changed');
   },
 
   componentDidMount() {

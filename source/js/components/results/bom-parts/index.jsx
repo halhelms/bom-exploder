@@ -10,13 +10,19 @@ var React = require('react');
 // REACT COMPONENTS
 
 var BomPartsHeader = require('./bom-parts-header');
-var BomPartDetail = require('./bom-part-detail');
+var BomPartDetail  = require('./bom-part-detail');
+
+var TempStore      = require('../../../stores/TempStore');
 
 var BomPartsIndex = React.createClass({
 
     getInitialState() {
       return {
       };
+    },
+
+    componentWillMount() {
+      this.setState({results: TempStore.getResults()});
     },
 
     getDefaultProps() {
@@ -32,24 +38,23 @@ var BomPartsIndex = React.createClass({
     },
 
     render() {
-      var bomParts = [
-        {part_number: '11401', manufacturer: 'Illinois Capacitor', target_price: 1.07, quantity: 4800},
-        {part_number: 'A2071R-N', manufacturer: 'AMD', target_price: 1.07, quantity: 4800},
-        {part_number: 'M207YD', manufacturer: 'TI', target_price: .49, quantity: 10000},
-        {part_number: 'X-2039', manufacturer: 'Farragon', target_price: .12, quantity: 7200},
-        {part_number: '24930', manufacturer: 'Intel', target_price: 3.64, quantity: 5150},
-        {part_number: '72-AM0', manufacturer: 'AMD', target_price: .84, quantity: 1200},
-        {part_number: 'L1-148', manufacturer: 'Illinois Capacitor', target_price: 1.67, quantity: 6475},
-        {part_number: 'TX25684', manufacturer: 'AMD', target_price: 2.18, quantity: 8100},
-      ];
+      var bom_parts = Object.keys(this.state.results.bom_parts).map((key, i) => {
+        return {
+          part_number : key,
+          manufacturer: this.state.results.bom_parts[key].manufacturer,
+          target_price: this.state.results.bom_parts[key].target_price,
+          quantity    : this.state.results.bom_parts[key].required_quantity
+        };
+      });
 
-      var details = bomParts.map( (part, i) => {
+      var details = bom_parts.map( (part, i) => {
         return <BomPartDetail bom_part = {part} key={i} />
       });
 
+
       return (
         <div>
-          <h5>Your BOM Parts</h5>
+          <h5 className='text-center'>Your BOM Parts</h5>
           <BomPartsHeader />
           {details}
         </div>

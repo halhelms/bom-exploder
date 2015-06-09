@@ -20,6 +20,8 @@ var SelectionOverviewIndex   = require('./selection-overview/index');
 var BomPartsIndex            = require('./bom-parts/index');
 var MatchedPartsIndex        = require('./matched-parts/index');
 
+var TempStore                = require('../../stores/TempStore');
+
 var Results = React.createClass({
   getDefaultProps() {
     return (
@@ -28,6 +30,10 @@ var Results = React.createClass({
         bom_id: 0
       }
     );
+  },
+
+  componentWillMount() {
+    this.setState({results: TempStore.getResults()});
   },
 
   render() {
@@ -79,8 +85,7 @@ var Results = React.createClass({
           </div>
 
           <div className='col-md-9 bordered'>
-            Matches
-
+            <MatchedPartsIndex />
           </div>
         </div>
 

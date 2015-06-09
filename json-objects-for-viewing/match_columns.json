@@ -1,0 +1,83 @@
+{
+  "1111": {
+    "name": "Allied",
+    "id": "1111",
+    "bom_parts": {
+      "11401N": {
+        "part_number": "11401N",
+        "manufacturer": "Illinois Capacitor",
+        "qoh": "3400",
+        "moq": "50",
+        "price": "1.22"
+      },
+      "TMS-5847": {
+        "part_number": "TMS-5847",
+        "manufacturer": "TI",
+        "qoh": "4500",
+        "moq": "100",
+        "price": "0.47"
+      },
+      "R2D2": {
+        "part_number": "R2D2",
+        "manufacturer": "Lucas",
+        "qoh": "1522",
+        "moq": "10",
+        "price": "2.76"
+      }
+    }
+  },
+  "1112": {
+    "name": "Arrow",
+    "id": "1112",
+    "bom_parts": {
+      "11401N": {
+        "part_number": "11401N",
+        "manufacturer": "Illinois Capacitor",
+        "qoh": "3250",
+        "moq": "10",
+        "price": "1.31"
+      },
+      "TMS-5847": {
+        "part_number": "TMS-5847-R",
+        "manufacturer": "Motorola",
+        "qoh": "6655",
+        "moq": "10",
+        "price": "0.75"
+      },
+      "R2D2": {
+        "part_number": "R2D2",
+        "manufacturer": "Lucas Elec.",
+        "qoh": "12453",
+        "moq": "100",
+        "price": "2.04"
+      }
+    }
+  },
+  "1113": {
+    "name": "Avnet",
+    "id": "1113",
+    "bom_parts": {
+      "11401N": {
+        "part_number": "11401N-R",
+        "manufacturer": "AMD",
+        "qoh": "5690",
+        "moq": "50",
+        "price": "1.11"
+      },
+      "TMS-5847": {
+        "part_number": "TMS5847A",
+        "manufacturer": "AMD",
+        "qoh": "18000",
+        "moq": "100",
+        "price": "0.62"
+      },
+      "R2D2": {
+        "part_number": "R2DTOO",
+        "manufacturer": "AMD",
+        "qoh": "1034",
+        "moq": "10",
+        "price": "2.62"
+      }
+    }
+  }
+}

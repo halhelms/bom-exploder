@@ -1,4 +1,7 @@
 'use strict'
+
+// I am responsible for displaying the 'Matching Results' area. 
+
 var React = require('react');
 
 // STORES
@@ -7,7 +10,10 @@ var React = require('react');
 // var ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 var MatchedPartsHeader = require('./matched-parts-header');
-var MatchedPartDetail = require('./matched-part-detail');
+var MatchedPartDetail  = require('./matched-part-detail');
+var MatchedPartsColumn  = require('./matched-parts-column');
+
+var TempStore          = require('../../../stores/TempStore');
 
 var MatchedPartsIndex = React.createClass({
 
@@ -20,8 +26,16 @@ var MatchedPartsIndex = React.createClass({
     },
 
     getDefaultProps() {
-      return {};
+      return {
+        quantity_displayed: 5,
+      };
     },
+
+    componentWillMount() {
+      this.setState({results: TempStore.getResults()});
+      this.setState({distributors: TempStore.getDistributors()});
+    },
+
 
     componentDidMount() {
 
@@ -32,26 +46,41 @@ var MatchedPartsIndex = React.createClass({
     },
 
     render() {
-     var matchedParts = [
-        {part_number: '11401', manufacturer: 'Illinois Capacitor', price: 1.07, qoh: 4800, moq: 100},
-        {part_number: 'A2071R-N', manufacturer: 'AMD', price: 1.07, qoh: 4800, moq: 10},
-        {part_number: 'M207YD', manufacturer: 'TI', price: .49, qoh: 10000, moq: 1},
-        {part_number: 'X-2039', manufacturer: 'Farragon', tprice: .12, qoh: 7200, moq: 10},
-        {part_number: '24930', manufacturer: 'Intel', price: 3.64, qoh: 5150, moq: 50},
-        {part_number: '72-AM0', manufacturer: 'AMD', price: .84, qoh: 1200, moq: 100},
-        {part_number: 'L1-148', manufacturer: 'Illinois Capacitor', price: 1.67, qoh: 6475, moq: 25},
-        {part_number: 'TX25684', manufacturer: 'AMD', price: 2.18, qoh: 8100, moq: 1},
-      ];
-
-      var details = matchedParts.map( (part, i) => {
-        return <MatchedPartDetail matched_part = {part} key={i} />
+      // This is going to get a little complicated...
+      var match_columns = {};
+      // Create match_columns with each key the id of a distributor whose value is an object
+      // with two keys, 'name' and 'bom_parts'
+      this.state.distributors.forEach((distributor, i) => {
+        Object.keys(this.state.results.bom_parts).forEach((bom_part_number, j) => {
+          match_columns[distributor.id] = {
+            name: distributor.name,
+            id: distributor.id,
+            bom_parts: {}
+          }
+        })
       });
 
+      // Now loop over the bom_parts in this.state.results
+      // Attach the 'best_match' to the appropriate distributor's appropriate bom_parts key
+      Object.keys(this.state.results.bom_parts).forEach((bom_part_number, i) => {
+        Object.keys(this.state.results.bom_parts[bom_part_number].distributors).forEach((distributor_id, j) => {
+          match_columns[distributor_id].bom_parts[bom_part_number] = this.state.results.bom_parts[bom_part_number].distributors[distributor_id].best_match
+        });
+      });
+
+      var columns = Object.keys(match_columns).map((distributor_id, i) => {
+        return (
+          <MatchedPartsColumn distributor={match_columns[distributor_id]} key={i} />
+        );
+      })
+
+      console.log(match_columns);
       return (
         <div>
-          <h5>Matched Parts</h5>
-          <MatchedPartsHeader />
-          {details}
+          <h5 className='text-center'>Matching Results</h5>
+          <div>
+            {columns}
+          </div>
         </div>
       );
     }

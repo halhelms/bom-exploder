@@ -7,6 +7,7 @@ var React = require('react');
 // var ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 var DistributorColumn = require('./distributor-column');
+var TempStore      = require('../../../stores/TempStore');
 
 var FilterSelectDistributors = React.createClass({
 
@@ -20,6 +21,10 @@ var FilterSelectDistributors = React.createClass({
       };
     },
 
+    componentWillMount() {
+      this.setState({distributors: TempStore.getDistributors()});
+    },
+
     componentDidMount() {
 
     },
@@ -29,29 +34,16 @@ var FilterSelectDistributors = React.createClass({
     },
 
     render() {
-      var distributors = [
-        {name: 'Allied', quantity: 54, checked: true},
-        {name: 'Arrow', quantity: 23, checked: true},
-        {name: 'AvNet', quantity: 36, checked: true},
-        {name: 'Digi-Key', quantity: 19, checked: true},
-        {name: 'element', quantity: 31, checked: true},
-        {name: 'Farnell', quantity: 42, checked: true},
-        {name: 'Future', quantity: 17, checked: true},
-        {name: 'Grainger', quantity: 13, checked: true},
-        {name: 'Heilind', quantity: 51, checked: true},
-        {name: 'Master', quantity: 43, checked: true},
-        {name: 'Mouser', quantity: 61, checked: true},
-        {name: 'Newark', quantity: 57, checked: true},
-        {name: 'PEI Genesis', quantity: 18, checked: true},
-        {name: 'Powell', quantity: 12, checked: true},
-        {name: 'RS Components', quantity: 9, checked: true},
-        {name: 'Rutronik', quantity: 16, checked: true},
-        {name: 'Sager', quantity: 34, checked: true},
-        {name: 'TTI', quantity: 22, checked: true},
-        {name: 'Verical', quantity: 6, checked: true},
-        {name: 'Zoro', quantity: 19, checked: true}
-      ];
-
+      var distributors = this.state.distributors.map((distributor, i) => {
+        return (
+          {
+            name    : distributor.name,
+            quantity: distributor.matched_quantity,
+            checked : distributor.show,
+            id      : distributor.id
+          }
+        );
+      });
 
       var distributorBundles = [];
      

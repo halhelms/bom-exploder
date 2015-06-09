@@ -1,16 +1,15 @@
 'use strict'
 var React = require('react');
 
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
 // STORES
 // var ???Store = require('../../stores/???Store');
 // ACTIONS
 // var ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
+var MatchedPartsHeader = require('./matched-parts-header');
+var MatchedPartDetail  = require('./matched-part-detail');
 
-
-var MatchedPartsHeader = React.createClass({
+var MatchedPartsColumn = React.createClass({
 
     getInitialState() {
       return {
@@ -30,13 +29,13 @@ var MatchedPartsHeader = React.createClass({
     },
 
     render() {
-
+      
       return (
-          <div >
-            {this.props.distributor_name}
-          </div>
+        <div>
+          <MatchedPartsHeader distributor_name={this.props.distributor.name} />  
+        </div>
       );
     }
 })
 
-module.exports = MatchedPartsHeader;
+module.exports = MatchedPartsColumn;
