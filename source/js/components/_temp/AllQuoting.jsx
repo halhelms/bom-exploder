@@ -43,11 +43,9 @@ var AllQuoting = React.createClass({
   },
 
   handleQuoteClick() {
-    console.log('Quote was clicked');
   },
 
   handleIndividualCheckboxClick() {
-    console.log(this.props.children);
   },
 
   render() {

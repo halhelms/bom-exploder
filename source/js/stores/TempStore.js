@@ -1,12 +1,155 @@
-var AppDispatcher = require('../dispatcher/AppDispatcher');
-var EventEmitter  = require('events').EventEmitter;
-var assign        = require('../../../node_modules/object-assign');
+'use strict'
+let AppDispatcher = require('../dispatcher/AppDispatcher');
+let EventEmitter  = require('events').EventEmitter;
+let assign        = require('../../../node_modules/object-assign');
+EventEmitter.prototype.vars = {};
 
 
-var CHANGE_EVENT = 'CHANGE';
+let CHANGE_EVENT = 'CHANGE';
 
-var TempStore = assign({}, EventEmitter.prototype, {
+let TempStore = assign({}, EventEmitter.prototype, {
+  getEmailItem(id) {
+    let found_inbox_item = null;
+    this.state.inbox_items.forEach((inbox_item, i) => {
+      if (inbox_item.id === id) {
+        found_inbox_item = inbox_item; 
+      }
+    });
+    return found_inbox_item;
+  },
+
+  getBom(id) {
+    let found_bom = null;
+    this.state.boms.forEach((bom, i) => {
+      if (bom.id === id) {
+        found_bom = bom;
+      }
+    });
+    return found_bom;
+  },
+
+  getBoms() {
+    return this.state.boms;
+  },
+
+  getResultsMode() {
+    return this.state.results_mode;
+  },
+
+  getMatchedPartsDetails(bom_id, distributor_id) {
+    return this.state.matched_parts_details;
+  },
+
   state: {
+    results_mode: 'matching',
+
+    matched_parts_details: {
+      bom_part_id: '11401N',
+      distributor_id: 1112,
+      distributor_name: 'Arrow',
+      matched_parts: [
+        {
+          part_number: '1401N-i',
+          manufacturer: 'Illinois Capacitor',
+          description: 'Diurnal split capacitor',
+          info_page: 'arrow.com/parts/1401N-i',
+          quoted: true,
+          qoh: 1800,
+          moq: 1,
+          price_breaks: [
+            {
+              from: 1,
+              to: 10,
+              price: 1.32
+            },
+            {
+              from: 11,
+              to: 100,
+              price: 1.21              
+            },
+            {
+              from: 101,
+              to: 500,
+              price: 1.16
+            },
+            {
+              from: 501,
+              to: 1000000,
+              price: 1.08          
+            }
+          ]
+        },
+        {
+          part_number: '1401-IA',
+          manufacturer: 'AMD',
+          description: 'Flux capacitor, bifurcated',
+          info_page: 'arrow.com/parts/1401-IA',
+          quoted: false,
+          qoh: 6400,
+          moq: 10,
+          price_breaks: [
+            {
+              from: 10,
+              to: 50,
+              price: 1.61
+            },
+            {
+              from: 51,
+              to: 100,
+              price: 1.48              
+            },
+            {
+              from: 101,
+              to: 250,
+              price: 1.32
+            },
+            {
+              from: 251,
+              to: 500,
+              price: 1.21          
+            },
+            {
+              from: 501,
+              to: 1000000,
+              price: 1.17          
+            }
+          ]
+        }
+      ]
+    },
+
+    boms: [
+      {
+        "name": "iPhone 6 Charging Station",
+        "id": "10000",
+        "description": "Charging station for iPhone 6/6+",
+        "created_on": "12 July 2015",
+        "last_updated_on": "12 July 2015",
+        "new_quotes": "true"
+      },
+      {
+        "name": "Bacon Toaster",
+        "id": "20000",
+        "description": "Make bacon as easily as you make toast",
+        "created_on": "23 July 2015",
+        "last_updated_on": "26 July 2015",
+        "new_quotes": "false"
+      },
+      {
+        "name": "Time Traveler",
+        "id": "30000",
+        "description": "Time travel device",
+        "created_on": "2 August 2015",
+        "last_updated_on": "9 August 2015",
+        "new_quotes": "false"
+      }
+    ],
+    
+    inbox_items: [
+      {id: 101, author: 'bob@allied.com', subject: 'Quote for Part 11401N for iPhone Charging Station', quote_price: 1.19 , contents: 'We can supply that part for $1.19 ea. in quantities of 100 or more'},
+      {id: 102, author: 'marissa@avnet.com', subject: 'Quote for Part R2D2 for iPhone Charging Station', quote_price: 3.74 , contents: 'We have a similar part. Same specs but commercial grade for $3.74. QOH: 1,500. MOQ: 50'},
+      {id: 103, author: 'andrea@future.com', subject: 'Quote for Part R2D2 for iPhone Charging Station', quote_price: 3.42 , contents: 'We are backordered on that part, but expect shipment in 2 weeks. If you can wait on that, we can sell it to you for $3.42.'}
+    ],
     distributors: [
       {
           "id": "1111",
@@ -151,7 +294,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Illinois Capacitor",
             "qoh": "3400",
             "moq": "50",
-            "price": "1.22"
+            "price": "1.22",
+            "quoted" : "true"
           }
         },
         "1112": {
@@ -161,7 +305,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Illinois Capacitor",
             "qoh": "3250",
             "moq": "10",
-            "price": "1.31"
+            "price": "1.31",
+            "quoted" : "false"
           }
         },
         "1113": {
@@ -171,7 +316,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "5690",
             "moq": "50",
-            "price": "1.11"
+            "price": "1.11",
+            "quoted" : "false"
           }
         },
         "1114": {
@@ -181,7 +327,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "1100",
             "moq": "50",
-            "price": "1.19"
+            "price": "1.19",
+            "quoted" : "true"
           }
         },
         "1115": {
@@ -195,7 +342,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Motorola",
             "qoh": "17645",
             "moq": "1",
-            "price": "1.34"
+            "price": "1.34",
+            "quoted" : "false"
           }
         },
         "1117": {
@@ -205,7 +353,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Illinois Capacitor",
             "qoh": "1625",
             "moq": "10",
-            "price": "1.34"
+            "price": "1.34",
+            "quoted" : "true"
           }
         },
         "1118": {
@@ -215,7 +364,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "4395",
             "moq": "50",
-            "price": "1.94"
+            "price": "1.94",
+            "quoted" : "false"
           }
         }
       }
@@ -234,7 +384,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "TI",
             "qoh": "4500",
             "moq": "100",
-            "price": "0.47"
+            "price": "0.47",
+            "quoted" : "false"
           }
         },
         "1112": {
@@ -244,7 +395,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Motorola",
             "qoh": "6655",
             "moq": "10",
-            "price": "0.75"
+            "price": "0.75",
+            "quoted" : "false"
           }
         },
         "1113": {
@@ -254,7 +406,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "18000",
             "moq": "100",
-            "price": "0.62"
+            "price": "0.62",
+            "quoted" : "false"
           }
         },
         "1114": {
@@ -264,7 +417,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Illinois Capacitor",
             "qoh": "9833",
             "moq": "1",
-            "price": "0.81"
+            "price": "0.81",
+            "quoted" : "false"
           }
         },
         "1115": {
@@ -278,7 +432,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "7266",
             "moq": "5",
-            "price": "0.78"
+            "price": "0.78",
+            "quoted" : "false"
           }
         },
         "1117": {
@@ -288,7 +443,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "CBC",
             "qoh": "3782",
             "moq": "1",
-            "price": "0.69"
+            "price": "0.69",
+            "quoted" : "false"
           }
         },
         "1118": {
@@ -298,7 +454,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Intel",
             "qoh": "8992",
             "moq": "50",
-            "price": "0.72"
+            "price": "0.72",
+            "quoted" : "false"
           }
         }
       }
@@ -317,7 +474,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Lucas",
             "qoh": "1522",
             "moq": "10",
-            "price": "2.76"
+            "price": "2.76",
+            "quoted" : "false"
           }
         },
         "1112": {
@@ -327,7 +485,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Lucas Elec.",
             "qoh": "12453",
             "moq": "100",
-            "price": "2.04"
+            "price": "2.04",
+            "quoted" : "true"
           }
         },
         "1113": {
@@ -337,7 +496,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "AMD",
             "qoh": "1034",
             "moq": "10",
-            "price": "2.62"
+            "price": "2.62",
+            "quoted" : "false"
           }
         },
         "1114": {
@@ -347,7 +507,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "LMF",
             "qoh": "23627",
             "moq": "100",
-            "price": "3.01"
+            "price": "3.01",
+            "quoted" : "true"
           }
         },
         "1115": {
@@ -361,7 +522,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "TI",
             "qoh": "4837",
             "moq": "50",
-            "price": "2.93"
+            "price": "2.93",
+            "quoted" : "false"
           }
         },
         "1117": {
@@ -381,7 +543,8 @@ var TempStore = assign({}, EventEmitter.prototype, {
             "manufacturer": "Intel",
             "qoh": "7167",
             "moq": "3540",
-            "price": "3.22"
+            "price": "3.22",
+            "quoted" : "false"
           }
         }
       }
@@ -399,7 +562,12 @@ var TempStore = assign({}, EventEmitter.prototype, {
     return this.state;
   },
 
+  getInboxItems() {
+    return this.state.inbox_items;
+  },
+
   getResults() {
+    assign(this.vars, {msg: 'hello'});
     return this.state.results;
   },
 

@@ -1,47 +1,52 @@
 'use strict'
-var React = require('react');
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-var BomPartDetail = React.createClass({
+let BomPartDetail = React.createClass({
+  propTypes: {
+    bom_part: object,
+  },
 
-    getInitialState() {
-      return {
-      };
-    },
+  getInitialState() {
+    return {
+    };
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getDefaultProps() {
+    return {};
+  },
 
-    componentDidMount() {
+  componentDidMount() {
 
-    },
+  },
 
-    componentDidUnmount() {
+  componentDidUnmount() {
 
-    },
+  },
 
-    render() {
+  render() {
+    let selected = <img src="/source/assets/images/selected.png" height='21px' />
 
-      return (
-        <div>
-          <div className='bom-part-left inline'>
-            {this.props.bom_part.part_number}<br />{this.props.bom_part.manufacturer}
-          </div>
-          <div className='bom-part-right inline text-right'>
-            {this.props.bom_part.target_price}<br />{this.props.bom_part.quantity}
-          </div>
+    return (
+      <div>
+        <div className='bom-part-left inline'>
+          {this.props.bom_part.part_number}<br />{this.props.bom_part.manufacturer}
+          <br />
+          {selected}
         </div>
-      );
-    }
+        <div className='bom-part-right inline text-right'>
+          {this.props.bom_part.target_price}<br />{this.props.bom_part.quantity}
+        </div>
+      </div>
+    );
+  }
 })
 
 module.exports = BomPartDetail;

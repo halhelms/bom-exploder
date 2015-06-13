@@ -1,40 +1,44 @@
 'use strict'
-var React = require('react');
+let React = require('react');
 
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-var FilterDistributors = React.createClass({
+let FilterDistributors = React.createClass({
 
-    getInitialState() {
-      return {};
-    },
+  getInitialState() {
+    return {};
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getDefaultProps() {
+    return {};
+  },
 
-    componentDidMount() {
+  componentDidMount() {
 
-    },
+  },
 
-    componentDidUnmount() {
+  componentWillMount() {
+    
+  },
 
-    },
+  componentDidUnmount() {
 
-    render() {
-      return (
-        <div className='checkbox'>
-          <label>
-            <input type="checkbox" /><span className='push-right-6'>Filter by Distributors</span>
-          </label>
-        </div>
-      );
-    }
+  },
+
+  render() {
+    return (
+      <div className='checkbox'>
+        <label>
+          <input type="checkbox" /><span className='push-right-6'>Filter by Distributors</span>
+        </label>
+      </div>
+    );
+  }
 })
 
 module.exports = FilterDistributors;

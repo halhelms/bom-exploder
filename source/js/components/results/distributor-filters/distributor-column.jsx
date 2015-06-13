@@ -1,6 +1,6 @@
-
-var React = require('react');
-
+'use strict'
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
 // var ???Store = require('../../stores/???Store');
 // ACTIONS
@@ -8,35 +8,42 @@ var React = require('react');
 // REACT COMPONENTS
 
 
-var DistributorColumn = React.createClass({
+let DistributorColumn = React.createClass({
+  propTypes: {
+    distributors: array
+  },  
 
-    getInitialState() {
-      return {};
-    },
+  getInitialState() {
+    return {};
+  },
 
-    getDefaultProps() {
-      return {
-      };
-    },
+  getDefaultProps() {
+    return {
+    };
+  },
 
-    componentDidMount() {
+  componentWillMount() {
+    
+  },
 
-    },
+  componentDidMount() {
 
-    componentDidUnmount() {
+  },
 
-    },
+  componentDidUnmount() {
 
-    render() {
-      var checkboxes = this.props.distributors.map( (distributor, i) => {
-        return (<div key={i} className='with-padding-6'><input type='checkbox' /><span className='push-right-6'>{distributor.name}</span></div>);
-      });
-      return (
-        <div>
-          {checkboxes}
-        </div>
-      );
-    }
+  },
+
+  render() {
+    let checkboxes = this.props.distributors.map( (distributor, i) => {
+      return (<div key={i} className='with-padding-6'><input type='checkbox' /><span className='push-right-6'>{distributor.name}</span></div>);
+    });
+    return (
+      <div>
+        {checkboxes}
+      </div>
+    );
+  }
 });
 
 module.exports = DistributorColumn;

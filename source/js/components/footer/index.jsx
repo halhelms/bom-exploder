@@ -1,10 +1,10 @@
 
 'use strict'
-var React = require('react')
-var Footer = React.createClass({
-    render() {
-      return (<div>Footer</div>);
-    }
+let React = require('react')
+let Footer = React.createClass({
+  render() {
+    return (<div>Footer</div>);
+  }
 });
 
 module.exports = Footer;

@@ -1,9 +1,7 @@
 'use strict'
-var React = require('react');
-var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
 // STORES
 // var ???Store = require('../../stores/???Store');
 // ACTIONS
@@ -12,7 +10,6 @@ var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
 
 
 var ???ComponentName = React.createClass({
-    mixins: [PureRenderMixin],
 
     getInitialState() {
       return {};
@@ -20,6 +17,10 @@ var ???ComponentName = React.createClass({
 
     getDefaultProps() {
       return {};
+    },
+
+    componentWillMount() {
+      
     },
 
     componentDidMount() {

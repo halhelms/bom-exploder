@@ -1,19 +1,21 @@
-
 'use strict'
 
-var Router       = require('react-router');
-var Link         = Router.Link;
+let Router       = require('react-router');
+let Link         = Router.Link;
 
-var React = require('react');
+let React = require('react');
+let PartSearcher = require('./part-searcher');
 
-var Header = React.createClass({
+
+let Header = React.createClass({
   render() {
     return (
-      <div className="header">
+      <div className="header row">
         <div className="col-md-8" />
         <div className="col-md-4">
           <Link to="contact-info">My Account</Link>{' '} | {' '}
           <Link to="boms">My BOMs</Link>
+          <div className='text-right part-searcher inline'><PartSearcher /></div>
         </div>
       </div>
     );

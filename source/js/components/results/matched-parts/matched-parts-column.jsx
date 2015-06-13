@@ -1,41 +1,57 @@
 'use strict'
-var React = require('react');
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
-var MatchedPartsHeader = require('./matched-parts-header');
-var MatchedPartDetail  = require('./matched-part-detail');
+let MatchedPartsHeader = require('./matched-parts-header');
+let MatchedPartDetail  = require('./matched-part-detail');
 
-var MatchedPartsColumn = React.createClass({
+let MatchedPartsColumn = React.createClass({
 
-    getInitialState() {
-      return {
-      };
-    },
+  propTypes: {
+    distributor: object.isRequired,
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getInitialState() {
+    return {
+    };
+  },
 
-    componentDidMount() {
+  getDefaultProps() {
+    return {};
+  },
 
-    },
+  componentWillMount() {
+    
+  },
 
-    componentDidUnmount() {
+  componentDidMount() {
 
-    },
+  },
 
-    render() {
-      
+  componentDidUnmount() {
+
+  },
+
+  render() {
+
+    let matched_results = Object.keys(this.props.distributor.matched_parts).map((bom_part_id, i) => {
       return (
-        <div>
-          <MatchedPartsHeader distributor_name={this.props.distributor.name} />  
-        </div>
+        <MatchedPartDetail matched_part={this.props.distributor.matched_parts[bom_part_id]} key={i} />
       );
-    }
+    });
+    return (
+      <div className='inline'>
+        <MatchedPartsHeader className='bom-part-header-left inline' distributor_name={this.props.distributor.name} />  
+        <br />
+        {matched_results}
+      </div>
+    );
+  }
 })
 
 module.exports = MatchedPartsColumn;

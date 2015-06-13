@@ -1,28 +1,33 @@
 'use strict'
-var React = require('react');
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
 // STORES
-// var BOMStore        = require('/Users/halhelms/bom-exploder/stores/BOMStore');
-// var BOMMatcherStore = require('/Users/halhelms/bom-exploder/stores/BOMMatcherStore');
+
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
+
 // REACT COMPONENTS
-var FilterDistributors       = require('./distributor-filters/filter-distributors');
-var FilterAll                = require('./distributor-filters/filter-all');
-var FilterQuoting            = require('./distributor-filters/filter-quoting');
-var FilterSelectDistributors = require('./distributor-filters/filter-select-distributors');
-var HighlightLowestPrice     = require('./distributor-filters/highlight-lowest-price');
-var HighlightQuotedPrice     = require('./distributor-filters/highlight-quoted-price');
-var HideSelectedParts        = require('./distributor-filters/hide-selected-parts');
-var SelectionOverviewIndex   = require('./selection-overview/index');
-var BomPartsIndex            = require('./bom-parts/index');
-var MatchedPartsIndex        = require('./matched-parts/index');
+let FilterDistributors       = require('./distributor-filters/filter-distributors');
+let FilterAll                = require('./distributor-filters/filter-all');
+let FilterQuoting            = require('./distributor-filters/filter-quoting');
+let FilterSelectDistributors = require('./distributor-filters/filter-select-distributors');
+let HighlightLowestPrice     = require('./distributor-filters/highlight-lowest-price');
+let HighlightQuotedPrice     = require('./distributor-filters/highlight-quoted-price');
+let HideSelectedParts        = require('./distributor-filters/hide-selected-parts');
+let SelectionOverviewIndex   = require('./selection-overview/index');
+let BomPartsIndex            = require('./bom-parts/index');
+let MatchedPartsIndex        = require('./matched-parts/index');
 
-var TempStore                = require('../../stores/TempStore');
+let TempStore                = require('../../stores/TempStore');
 
-var Results = React.createClass({
+let Results = React.createClass({
+
+  propTypes: {
+    bom_name: string,
+    bom_id: number
+  },
+  
   getDefaultProps() {
     return (
       {

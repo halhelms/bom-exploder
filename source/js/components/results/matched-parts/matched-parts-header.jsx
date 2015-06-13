@@ -1,42 +1,47 @@
 'use strict'
-var React = require('react');
-
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-var MatchedPartsHeader = React.createClass({
+let MatchedPartsHeader = React.createClass({
+  propTypes: {
+    distributor_name: string,
+  },  
 
-    getInitialState() {
-      return {
-      };
-    },
+  getInitialState() {
+    return {
+    };
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getDefaultProps() {
+    return {};
+  },
 
-    componentDidMount() {
+  componentWillMount() {
+    
+  },
 
-    },
+  componentDidMount() {
 
-    componentDidUnmount() {
+  },
 
-    },
+  componentDidUnmount() {
 
-    render() {
+  },
 
-      return (
-          <div >
-            {this.props.distributor_name}
-          </div>
-      );
-    }
+  render() {
+
+    return (
+      <div className='matched-part-header inline'>
+        {this.props.distributor_name}
+      </div>
+    );
+  }
 })
 
 module.exports = MatchedPartsHeader;

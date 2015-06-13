@@ -1,50 +1,50 @@
 'use strict'
-var React = require('react');
-var PureRenderMixin = require('react/addons').addons.PureRenderMixin;
-
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-var BomForm = React.createClass({
-    mixins: [PureRenderMixin],
+let BomForm = React.createClass({
 
-    propTypes: {
-      mode  : React.PropTypes.string,
-      bom_id: React.PropTypes.number
-    },
+  propTypes: {
+    mode  : string,
+    bom_id: number
+  },
 
-    getInitialState() {
-      return {};
-    },
+  getInitialState() {
+    return {};
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getDefaultProps() {
+    return {};
+  },
 
-    componentDidMount() {
+  componentWillMount() {
+    
+  },
 
-    },
+  componentDidMount() {
 
-    componentDidUnmount() {
+  },
 
-    },
+  componentDidUnmount() {
 
-    render() {
-      return (
-        <form>
-          <div className='form-group'>
-            <label for='project-name'>Project Name</label>
-            <input type='text' className='form-control' id='project-name' placeholder='Project name'>
-          </div>
-        </form>
-      );
-    }
+  },
+
+  render() {
+    return (
+      <form>
+        <div className='form-group'>
+          <label for='project-name'>Project Name</label>
+          <input type='text' className='form-control' id='project-name' placeholder='Project name'>
+        </div>
+      </form>
+    );
+  }
 })
 
 module.exports = BomForm;

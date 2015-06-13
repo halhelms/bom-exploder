@@ -1,47 +1,48 @@
 'use strict'
-var React = require('react');
-
-// BOOTSTRAP COMPONENTS
-// var Panel = require('react-bootstrap').Panel;
+let React = require('react');
+let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-// var ???Store = require('../../stores/???Store');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-var BomPartsHeader = React.createClass({
+let BomPartsHeader = React.createClass({
+  propTypes: {
 
-    getInitialState() {
-      return {
-      };
-    },
+  },
 
-    getDefaultProps() {
-      return {};
-    },
+  getInitialState() {
+    return {
+    };
+  },
 
-    componentDidMount() {
+  getDefaultProps() {
+    return {};
+  },
 
-    },
+  componentDidMount() {
 
-    componentDidUnmount() {
+  },
 
-    },
+  componentDidUnmount() {
 
-    render() {
+  },
 
-      return (
-        <div>
-          <div className='bom-part-header-left inline'>
-            Part No.<br />Mfgr.
-          </div>
-          <div className='bom-part-header-right inline'>
-            Target Price<br />Qty.
-          </div>
+  render() {
+
+    return (
+      <div>
+        <div className='bom-part-header-left inline'>
+          Part No.<br />Mfgr.
         </div>
-      );
-    }
+        <div className='bom-part-header-right inline'>
+          Target Price<br />Qty.
+        </div>
+      </div>
+    );
+  }
 })
 
 module.exports = BomPartsHeader;

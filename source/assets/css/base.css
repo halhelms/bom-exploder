@@ -16,6 +16,12 @@
   color: green;
 }
 
+.scroll {
+  overflow: visible;
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+
 .glyphicon-cloud-upload {
   margin-right: 6px;
   margin-left: 6px;
@@ -37,6 +43,11 @@ ul.bom-list {
 .fa-columns {
   margin-right: 6px;
   margin-bottom: 6px;
+}
+
+.fa-quote-left, .glyphicon-shopping-cart, .glyphicon-new-window {
+  color: gray;
+  margin-right: -1px;
 }
 
 li.inactive {
@@ -66,10 +77,56 @@ label.light {
   font-weight: normal;
 }
 
+.over-price: {
+  color: red;
+}
+
+.under-price: {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.part-searcher {
+  vertical-align: top;
+  margin-left: 12px;
+  margin-top: -8px;
+  margin-bottom: 3px;
+}
+
+.selected-bom-part {
+}
+
+.width-30 {
+  width: 30px;
+}
+
+.width-90 {
+  width: 90px;
+}
+
+.width-120 {
+  width: 120px;
+}
+
+.width-150 {
+  width: 150px;
+}
+
+.width-180 {
+  width: 180px;
+}
+
+.width-210 {
+  width: 210px;
+}
+
 .bordered {
   border-top: 1px solid black;
   border-right: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid black;
   border-left: 1px solid black
 }
 
@@ -78,6 +135,22 @@ label.light {
   margin-right: 6px;
   margin-top: 6px;
   margin-right: 6px;
+}
+
+.margin-right-2 {
+  margin-right: 2px;
+}
+
+.margin-right-6 {
+  margin-right: 6px;
+}
+
+.margin-left-6 {
+  margin-left: 6px;
+}
+
+.margin-left-200 {
+  margin-left: 200px;
 }
 
 .bom-part-header-left {
@@ -90,6 +163,7 @@ label.light {
   min-width: 60%;
   margin-right: -5%;
   color: #fefbf6;
+  height: 3em;
 }
 .bom-part-header-right {
   background-color: #0099FF;
@@ -101,6 +175,7 @@ label.light {
   min-width: 30%;
   margin-left: -5%;
   color: #fefbf6;
+  height: 3em;
 }
 
 .bom-part-left {
@@ -114,6 +189,7 @@ label.light {
   padding-left: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
+  height: 5em;
 } 
 
 .bom-part-right {
@@ -127,6 +203,7 @@ label.light {
   padding-right: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
+  height: 5em;
 }
 
 .matched-part-header {
@@ -137,9 +214,10 @@ label.light {
   border-right: 1px solid navy;
   border-left: 1px solid navy;
   min-width: 95%;
-  margin-right: -5%;
+  margin-right: -15%;
   margin-left: -5%;
   color: #fefbf6;
+  height: 3em;
 }
 
 .matched-part {
@@ -149,9 +227,10 @@ label.light {
   border-right: 1px solid silver;
   border-left: 1px solid silver;
   min-width: 95%;
-  margin-right: -5%;
+  margin-right: -15%;
   margin-left: -5%; 
   padding-left: 3px;
   padding-top: 3px;
   padding-bottom: 3px;
+  height: 5em;
 } 
