@@ -7,7 +7,8 @@
     "start": "npm run serve | npm run dev",
     "serve": "./node_modules/.bin/http-server -p 8080",
     "dev": "webpack-dev-server --progress --colors --port 8090",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "jest"
   },
   "author": "Hal Helms",
   "license": "ISC",
@@ -16,10 +17,11 @@
   },
   "devDependencies": {
     "http-server": "^0.8.0",
-    "webpack-dev-server": "^1.9.0",
+    "jest-cli": "^0.4.12",
     "jsx-loader": "^0.13.2",
     "node-libs-browser": "^0.5.0",
     "react-hot-loader": "^1.2.7",
-    "webpack": "^1.9.5"
+    "webpack": "^1.9.5",
+    "webpack-dev-server": "^1.9.0"
   }
 }

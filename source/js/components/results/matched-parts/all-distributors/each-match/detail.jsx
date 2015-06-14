@@ -3,16 +3,17 @@ let React = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+let TempStore = require('../../../../../stores/TempStore');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+let ResultsActions = require('../../../../../actions/results/matched-parts/all-distributors/each-match/actions');
 // REACT COMPONENTS
-
 
 let MatchedPartDetail = React.createClass({
 
   propTypes: {
     matched_part: object.isRequired,
+    bom_part_number: string.isRequired,
+    distributor_id: string.isRequired
   },
 
   getInitialState() {
@@ -25,11 +26,11 @@ let MatchedPartDetail = React.createClass({
   },
 
   componentWillMount() {
-    
+
   },
 
   componentDidMount() {
-
+  
   },
 
   componentDidUnmount() {
@@ -37,11 +38,11 @@ let MatchedPartDetail = React.createClass({
   },
 
   moreMatchingParts() {
-    console.log('more info on ' + this.props.bom_part_number);
+    ResultsActions.setAllMatchesForBomPartFromDistributor(this.props.bom_part_number, this.props.distributor_id);
   },
 
   render() {
-    // console.log('bom_part_number in detail.jsx', this.props.bom_part_number);
+
     let icons = null;
 
     if (!isEmpty(this.props.matched_part)) {

@@ -1,6 +1,5 @@
-var keyMirror = require('react/lib/keyMirror');
+import keyMirror from 'keymirror';
 
-module.exports = keyMirror({
-  FETCHED_BOMS: null,
-  FETCHED_BOM : null
+export default keyMirror({
+  
 });

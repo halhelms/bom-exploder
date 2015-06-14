@@ -1,12 +1,15 @@
+// I show columns of best matches by distributor for a given bom part
+
 'use strict'
-let React = require('react');
+
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-let TempStore = require('../../../../stores/TempStore');
+let TempStore                                         = require('../../../../stores/TempStore');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let ???Actions                                     = require('../../actions/???Actions');
 // REACT COMPONENTS
-let PriceBreak = require('./price-break');
+let PriceBreak                                        = require('./price-break');
 
 
 let SingleDistributorMatchedBomPartView = React.createClass({

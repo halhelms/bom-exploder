@@ -48,11 +48,21 @@ let MatchedPartsIndex = React.createClass({
   },
 
   componentDidMount() {
-    
+    TempStore.addChangeListener(this.onTempStoreChange);
   },
 
   componentDidUnmount() {
 
+  },
+
+  onTempStoreChange(args) {
+    console.log('args from onTempStoreChange in results/index.jsx', args)
+    this[args.action_data.subsequent_action](args);
+
+  },
+
+  SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE(args) {
+    console.log( 'SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE within index')
   },
 
   render() {

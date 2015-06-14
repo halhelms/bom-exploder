@@ -4,6 +4,7 @@ let EventEmitter  = require('events').EventEmitter;
 let assign        = require('../../../node_modules/object-assign');
 EventEmitter.prototype.vars = {};
 
+let ResultsConstants = require('../constants/results/constants');
 
 let CHANGE_EVENT = 'CHANGE';
 
@@ -566,7 +567,7 @@ let TempStore = assign({}, EventEmitter.prototype, {
 
   setState(obj) {
     assign(this.state, obj);
-    this.emit(CHANGE_EVENT);
+    this.emit(CHANGE_EVENT, obj);
   },
 
   getState() {
@@ -599,11 +600,12 @@ let TempStore = assign({}, EventEmitter.prototype, {
 // Register for Actions
 
 AppDispatcher.register(function(payload){
-  // switch (payload.action.actionType) {
-  //   case ???Constants.???:
-  //     BOMStore.setState( {???: payload.action.???} );
+  switch (payload.action.actionType) {
+    case ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DO:
+    payload.action.data.subsequent_action = ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE
+    TempStore.setState({action_data: payload.action.data});
   //     break;
-  // }
+  }
 });
 
 module.exports = TempStore;

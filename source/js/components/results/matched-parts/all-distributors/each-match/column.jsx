@@ -38,11 +38,16 @@ let MatchedPartsColumn = React.createClass({
   },
 
   render() {
+
     let matched_results = Object.keys(this.props.distributor.matched_parts).map((bom_part_id, i) => {
       return (
-        <MatchedPartDetail matched_part={this.props.distributor.matched_parts[bom_part_id]} key={i} bom_part_number={bom_part_id} />
+        <MatchedPartDetail 
+          matched_part={this.props.distributor.matched_parts[bom_part_id]} 
+          key={i} bom_part_number={bom_part_id} 
+          distributor_id={this.props.distributor.id} />
       );
     });
+    
     return (
       <div className='inline'>
         <MatchedPartsHeader className='bom-part-header-left inline' distributor_name={this.props.distributor.name} />  
