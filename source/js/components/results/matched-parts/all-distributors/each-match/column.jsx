@@ -7,8 +7,8 @@ let {array, bool, func, number, object, string, node} = React.PropTypes;
 // ACTIONS
 // let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
-let MatchedPartsHeader = require('./matched-parts-header');
-let MatchedPartDetail  = require('./matched-part-detail');
+let MatchedPartsHeader = require('./header');
+let MatchedPartDetail  = require('./detail');
 
 let MatchedPartsColumn = React.createClass({
 
@@ -38,10 +38,9 @@ let MatchedPartsColumn = React.createClass({
   },
 
   render() {
-
     let matched_results = Object.keys(this.props.distributor.matched_parts).map((bom_part_id, i) => {
       return (
-        <MatchedPartDetail matched_part={this.props.distributor.matched_parts[bom_part_id]} key={i} />
+        <MatchedPartDetail matched_part={this.props.distributor.matched_parts[bom_part_id]} key={i} bom_part_number={bom_part_id} />
       );
     });
     return (

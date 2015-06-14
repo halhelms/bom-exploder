@@ -2,15 +2,15 @@
 let React = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-let TempStore = require('../../../stores/TempStore');
+// let ???Store = require('../../stores/???Store');
 // ACTIONS
 // let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
 
 
-let AllDistributorsMatchedBomPartsView = React.createClass({
+let AllDistributorsTitle = React.createClass({
   propTypes: {
-    bom_id: string,
+    distributor_name: string,
   },  
 
   getInitialState() {
@@ -23,7 +23,7 @@ let AllDistributorsMatchedBomPartsView = React.createClass({
   },
 
   componentWillMount() {
-    this.setState({matching_results: TempStore.getMatchingResults()})
+    
   },
 
   componentDidMount() {
@@ -37,11 +37,11 @@ let AllDistributorsMatchedBomPartsView = React.createClass({
   render() {
 
     return (
-      <div>
-        All distributors, all parts
+      <div className='h4 text-center'>
+        Matching Results
       </div>
     );
   }
 })
 
-module.exports = AllDistributorsMatchedBomPartsView;
+module.exports = AllDistributorsTitle;

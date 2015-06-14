@@ -12,7 +12,7 @@ let {array, bool, func, number, object, string, node} = React.PropTypes;
 let MatchedPartDetail = React.createClass({
 
   propTypes: {
-    matched_part: React.PropTypes.object.isRequired,
+    matched_part: object.isRequired,
   },
 
   getInitialState() {
@@ -36,14 +36,19 @@ let MatchedPartDetail = React.createClass({
 
   },
 
+  moreMatchingParts() {
+    console.log('more info on ' + this.props.bom_part_number);
+  },
+
   render() {
+    // console.log('bom_part_number in detail.jsx', this.props.bom_part_number);
     let icons = null;
 
     if (!isEmpty(this.props.matched_part)) {
       icons = (
         <div className='inline' style={{float:'right'}}>
           <i data-ot="Mark part as SELECTED" data-ot-delay='0.2' data-ot-style="dark" className='glyphicon glyphicon-shopping-cart' /><br />
-          <i data-ot="More info on matching parts by this vendor" data-ot-delay='0.2' data-ot-style="dark" className='glyphicon glyphicon-new-window' /><br />
+          <i onClick = {this.moreMatchingParts} data-ot="More info on matching parts by this vendor" data-ot-delay='0.2' data-ot-style="dark" className='glyphicon glyphicon-new-window' /><br />
           {this.props.matched_part.quoted === 'true' ? <i data-ot="Quoted by this vendor" data-ot-delay='0.2' data-ot-style="dark" className='fa fa-quote-left' /> : null}
         </div>
       );

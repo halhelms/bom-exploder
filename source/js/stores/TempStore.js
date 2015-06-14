@@ -8,6 +8,7 @@ EventEmitter.prototype.vars = {};
 let CHANGE_EVENT = 'CHANGE';
 
 let TempStore = assign({}, EventEmitter.prototype, {
+  
   getEmailItem(id) {
     let found_inbox_item = null;
     this.state.inbox_items.forEach((inbox_item, i) => {
@@ -32,16 +33,26 @@ let TempStore = assign({}, EventEmitter.prototype, {
     return this.state.boms;
   },
 
-  getResultsMode() {
-    return this.state.results_mode;
-  },
-
   getMatchedPartsDetails(bom_id, distributor_id) {
     return this.state.matched_parts_details;
   },
 
+  getPercentSelected() {
+    return this.state.percent_selected;
+  },
+
+  getTotalTargetPrice() {
+    return this.state.total_target_price;
+  },
+
+  getTotalSelectedPrice() {
+    return this.total_selected_price;
+  },
+
   state: {
-    results_mode: 'matching',
+    percent_selected: 72,
+    total_target_price: 131700,
+    total_selected_price: 130650,
 
     matched_parts_details: {
       bom_part_id: '11401N',

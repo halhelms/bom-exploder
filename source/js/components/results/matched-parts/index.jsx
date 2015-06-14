@@ -6,106 +6,81 @@ let React = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+let TempStore                           = require('../../../stores/TempStore');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let ???Actions                       = require('../../actions/???Actions');
 // REACT COMPONENTS
 
-let MatchedPartsHeader     = require('./matched-parts-header');
-let MatchedPartDetail      = require('./matched-part-detail');
-let MatchedPartsColumn     = require('./matched-parts-column');
-let SingleDistributorMatchedBomPartView = require('./single-distributor-matched-bom-part-view');
-let AllDistributorsMatchedBomPartsView    = require('./all-distributors-matched-bom-parts-view');
+let SingleDistributorMatchedBomPartView = require('./single-distributor/matched-bom-part-view');
+let AllDistributorsMatchedBomPartsView  = require('./all-distributors/matched-bom-parts-view');
 
-let TempStore              = require('../../../stores/TempStore');
+let SingleDistributorTitle              = require('./single-distributor/title');
+let AllDistributorsTitle                = require('./all-distributors/title');
 
 let MatchedPartsIndex = React.createClass({
 
+  propTypes: {
+
+  },
+
   getInitialState() {
     return {
-      percent_selected: 72,
-      total_target_price: 131700,
-      total_selected_price: 130650,
-      all_results: true
+      percent_selected: 0,
+      total_target_price: 0,
+      total_selected_price: 0,
+      view_mode: {
+        distributor_id: null,
+        distributor_name: null,
+        bom_part_number: null
+      }
     };
   },
 
   getDefaultProps() {
     return {
-      quantity_displayed: 5,
     };
   },
 
   componentWillMount() {
-    this.setState({results: TempStore.getResults()});
-    this.setState({distributors: TempStore.getDistributors()});
+    this.setState({percent_selected: TempStore.getPercentSelected()});
+    this.setState({total_target_price: TempStore.getTotalTargetPrice()});
+    this.setState({total_selected_price: TempStore.getTotalSelectedPrice()});
   },
 
   componentDidMount() {
-    TempStore.addChangeListener(this.onStoreChange) ;
+    
   },
 
   componentDidUnmount() {
 
   },
 
-  onStoreChange() {
-    this.setState({results_mode: TempStore.getResultsMode()})
-  },
-
   render() {
-    // In normal results_mode (i.e. 'matching')
-    // This is going to get a little complicated...
-    let match_columns = {};
-    // Create match_columns with each key the id of a distributor whose value is an object
-    // with two keys, 'name' and 'bom_parts'
-    this.state.distributors.forEach((distributor, i) => {
-      Object.keys(this.state.results.bom_parts).forEach((bom_part_number, j) => {
-        match_columns[distributor.id] = {
-          name: distributor.name,
-          id: distributor.id,
-          matched_parts: {}
-        }
-      })
-    });
 
-    // Now loop over the bom_parts in this.state.results
-    // Attach the 'best_match' to the appropriate distributor's appropriate bom_parts key
-    Object.keys(this.state.results.bom_parts).forEach((bom_part_number, i) => {
-      Object.keys(this.state.results.bom_parts[bom_part_number].distributors).forEach((distributor_id, j) => {
-        match_columns[distributor_id].matched_parts[bom_part_number] = this.state.results.bom_parts[bom_part_number].distributors[distributor_id].best_match;
-      });
-    });
-
-    // Normal 'matching' results_mode view
-    let matching_view = Object.keys(match_columns).map((distributor_id, i) => {
-      return (
-        <MatchedPartsColumn distributor={match_columns[distributor_id]} key={i} />
-      );
-    })
-
-    // Matching part details view
-    let matched_part_details_view = <SingleDistributorMatchedBomPartView bom_id='100' distributor_id='1112' />;
-
-    // Start by declaring a null view
+    // Start by declaring a null view and title
     let view = null;
-    // If we're in 'matching' results mode...
-    if (this.state.all_results === true) {
-      view = matching_view;
+    let title = null;
+
+    // If we're in 'all distributors'  mode...
+    if (!this.state.view_mode.single_distributor_id) {
+      view  = <AllDistributorsMatchedBomPartsView />;
+      title = <AllDistributorsTitle />
+    
     } else {
-        // we must be in Matching part details results_mode
-      view = matched_part_details_view;
+        // we must be in 'single distributor' view
+      view = <SingleDistributorMatchedBomPartView 
+        bom_part_id={this.state.view_mode.bom_part_id} 
+        distributor_name={this.state.view_mode.distributor_name} />
+      title = <SingleDistributorTitle 
+        distributor_name={this.state.view_mode.distributor_name} 
+        bom_part_number={this.state.view_mode.bom_part_number} />
     }
-
-    // In detail results_mode (i.e. 'matching part details')
-
-    let title = this.state.results_mode === 'matching' ? "Matching Results" : "Matching Part Details";
 
     return (
       <div>
         <h5 className='text-center'>{title}</h5>
         <div>
-          {matched_part_details_view}
+          {view}
         </div>
       </div>
     );

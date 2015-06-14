@@ -2,7 +2,7 @@
 let React = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-let TempStore = require('../../../stores/TempStore');
+let TempStore = require('../../../../stores/TempStore');
 // ACTIONS
 // let ???Actions = require('../../actions/???Actions');
 // REACT COMPONENTS
