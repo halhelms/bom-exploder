@@ -52,6 +52,7 @@ let MatchedPartsIndex = React.createClass({
   },
 
   componentWillUpdate: function(nextProps, nextState) {
+    
   },
 
   componentDidUnmount(args) {
