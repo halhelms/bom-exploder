@@ -1,16 +1,18 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-let TempStore = require('../../../../stores/TempStore');
+let TempStore                                         = require('../../../../stores/TempStore');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
-let MatchedPartsHeader                  = require('./each-match/header');
-let MatchedPartDetail                   = require('./each-match/detail');
-let MatchedPartsColumn                  = require('./each-match/column');
+let MatchedPartsHeader                                = require('./each-match/header');
+let MatchedPartDetail                                 = require('./each-match/detail');
+let MatchedPartsColumn                                = require('./each-match/column');
 
 let MatchedBomPartsView = React.createClass({
+  path: 'results/matched_parts/all-distributors/matched-bom-parts-view',
+
   propTypes: {
   
   },  
@@ -41,6 +43,7 @@ let MatchedBomPartsView = React.createClass({
   },
 
   render() {
+    who.call(this);
     // This is going to get a little complicated...
     let match_columns = {};
     // Create match_columns with each key the id of a distributor whose value is an object

@@ -1,16 +1,16 @@
 'use strict'
-let React = require('react');
+let React          = require('react');
 
-let Router = require('react-router');
-let Link   = Router.Link;
+let {Router, Link} = require('react-router');
 // STORES
-let TempStore = require('../../stores/TempStore');
+let TempStore      = require('../../stores/TempStore');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions     = require('../../actions/Actions');
 // REACT COMPONENTS
 
 
 let BomList = React.createClass({
+  path: 'boms/bom-list',
 
   getInitialState() {
     return {};

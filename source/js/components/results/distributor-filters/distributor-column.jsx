@@ -1,14 +1,16 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-// var ???Store = require('../../stores/???Store');
+// var Store                                          = require('../../stores/Store');
 // ACTIONS
-// var ???Actions = require('../../actions/???Actions');
+// var Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
 
 
 let DistributorColumn = React.createClass({
+  path: 'results/distributor-filters/distributor-column',
+
   propTypes: {
     distributors: array
   },  

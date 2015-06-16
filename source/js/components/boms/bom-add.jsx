@@ -1,17 +1,17 @@
 'use strict'
-let React = require('react');
+let React          = require('react');
 
 // React Router
-let Router       = require('react-router');
-let Link         = Router.Link;
+let {Router, Link} = require('react-router');
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store       = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions     = require('../../actions/Actions');
 // REACT COMPONENTS
 
 
 let BomAdd = React.createClass({
+  path: 'boms/bom-add',
 
   getInitialState() {
     return {};

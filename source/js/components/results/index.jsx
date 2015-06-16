@@ -1,27 +1,28 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
 
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 
 // REACT COMPONENTS
-let FilterDistributors       = require('./distributor-filters/filter-distributors');
-let FilterAll                = require('./distributor-filters/filter-all');
-let FilterQuoting            = require('./distributor-filters/filter-quoting');
-let FilterSelectDistributors = require('./distributor-filters/filter-select-distributors');
-let HighlightLowestPrice     = require('./distributor-filters/highlight-lowest-price');
-let HighlightQuotedPrice     = require('./distributor-filters/highlight-quoted-price');
-let HideSelectedParts        = require('./distributor-filters/hide-selected-parts');
-let SelectionOverviewIndex   = require('./selection-overview/index');
-let BomPartsIndex            = require('./bom-parts/index');
-let MatchedPartsIndex        = require('./matched-parts/index');
+let FilterDistributors                                = require('./distributor-filters/filter-distributors');
+let FilterAll                                         = require('./distributor-filters/filter-all');
+let FilterQuoting                                     = require('./distributor-filters/filter-quoting');
+let FilterSelectDistributors                          = require('./distributor-filters/filter-select-distributors');
+let HighlightLowestPrice                              = require('./distributor-filters/highlight-lowest-price');
+let HighlightQuotedPrice                              = require('./distributor-filters/highlight-quoted-price');
+let HideSelectedParts                                 = require('./distributor-filters/hide-selected-parts');
+let SelectionOverviewIndex                            = require('./selection-overview/index');
+let BomPartsIndex                                     = require('./bom-parts/index');
+let MatchedPartsIndex                                 = require('./matched-parts/index');
 
-let TempStore                = require('../../stores/TempStore');
+let TempStore                                         = require('../../stores/TempStore');
 
 let Results = React.createClass({
+  path: 'results/matched-parts/index',
 
   propTypes: {
     bom_name: string,

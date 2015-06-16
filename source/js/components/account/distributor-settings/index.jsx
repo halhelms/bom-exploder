@@ -1,12 +1,12 @@
 'use strict'
-let React = require('react');
+let React           = require('react');
 
-let Router       = require('react-router');
-let Link         = Router.Link;
+let {Router, Link}  = require('react-router');
 
 let DistributorForm = require('./distributor-form');
 
 let DistributorSettings = React.createClass({
+  path: 'account/distributor-settings/index',
 
   getInitialState() {
     return {

@@ -17,3 +17,11 @@ var n = this,
     j = (j = i.length) > 3 ? j % 3 : 0;
    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
  };
+
+ who = function() {
+  console.log(this.__proto__.constructor.displayName + ' @ ' + this.__proto__.path);
+ }
+
+ clear = function() {
+  console.clear();
+ }

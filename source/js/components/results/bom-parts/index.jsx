@@ -1,18 +1,20 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store                                          = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
 
-let BomPartsHeader = require('./bom-parts-header');
-let BomPartDetail  = require('./bom-part-detail');
+let BomPartsHeader                                    = require('./bom-parts-header');
+let BomPartDetail                                     = require('./bom-part-detail');
 
-let TempStore      = require('../../../stores/TempStore');
+let TempStore                                         = require('../../../stores/TempStore');
 
 let BomPartsIndex = React.createClass({
+  path: 'results/bom-parts/index',
+
   propTypes: {
     
   },
@@ -39,6 +41,7 @@ let BomPartsIndex = React.createClass({
   },
 
   render() {
+    who.call(this);
     let bom_parts = Object.keys(this.state.results.bom_parts).map((key, i) => {
       return {
         part_number : key,

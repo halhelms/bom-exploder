@@ -34,8 +34,8 @@ let TempStore = assign({}, EventEmitter.prototype, {
     return this.state.boms;
   },
 
-  getMatchedPartsDetails(bom_id, distributor_id) {
-    return this.state.matched_parts_details;
+  getDistributorMatchesForBomPart() {
+    return this.state.distributor_matches_for_bom_part;
   },
 
   getPercentSelected() {
@@ -55,7 +55,7 @@ let TempStore = assign({}, EventEmitter.prototype, {
     total_target_price: 131700,
     total_selected_price: 130650,
 
-    matched_parts_details: {
+    distributor_matches_for_bom_part: {
       bom_part_id: '11401N',
       distributor_id: 1112,
       distributor_name: 'Arrow',
@@ -594,17 +594,34 @@ let TempStore = assign({}, EventEmitter.prototype, {
   removeChangeListener(callback) {
     this.removeListener(CHANGE_EVENT, callback);
   },
-});
 
+  getDistributorName(distributor_id) {
+    let found_distributor_name = "no name found";
+    this.state.distributors.forEach((distributor, i) => {
+      if (parseInt(distributor_id) === parseInt(distributor.id)) {
+        found_distributor_name = distributor.name;
+      }
+    });
+    return found_distributor_name;
+  },
+
+});
 
 // Register for Actions
 
 AppDispatcher.register(function(payload){
   switch (payload.action.actionType) {
     case ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DO:
-    payload.action.data.subsequent_action = ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE
-    TempStore.setState({action_data: payload.action.data});
-  //     break;
+      payload.action.data.subsequent_action = ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE;
+      payload.action.data.distributor_name = TempStore.getDistributorName(payload.action.data.distributor_id);
+      TempStore.setState({action_data: payload.action.data});
+      break;
+
+    case ResultsConstants.EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DO:
+      console.log('in TempStore EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DO');
+      payload.action.data.subsequent_action = ResultsConstants.EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DONE;
+      TempStore.setState({action_data: payload.action.data});
+      break;
   }
 });
 

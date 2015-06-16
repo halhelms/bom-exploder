@@ -3,13 +3,14 @@ let React = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions = require('../../actions/Actions');
 // REACT COMPONENTS
 
 
 let DistributorForm = React.createClass({
+  path: 'account/distributor-settings/index',
 
   propTypes: {
     id: number

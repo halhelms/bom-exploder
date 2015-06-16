@@ -4,6 +4,7 @@
 let React        = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
+
 // REACT COMPONENTS
 let Header              = require('./source/js/components/header/index');
 let Footer              = require('./source/js/components/footer/index');
@@ -37,11 +38,14 @@ window.API              = "http://private-1a4bb-bomexploder.apiary-mock.com/apib
 
 // The App component needs to go BEFORE the routes
 let App = React.createClass({
+  path: 'index',
+
   componentWillMount() {
     // DistributorsActions.fetchDistributors();
   },
 
   render() {
+    who.call(this);
     return (
       <div>
         <Header/>

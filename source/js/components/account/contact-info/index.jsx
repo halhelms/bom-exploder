@@ -1,13 +1,13 @@
 
 'use strict'
-let React       = require('react');
+let React          = require('react');
 
-let Router      = require('react-router');
-let Link        = Router.Link;
+let {Router, Link} = require('react-router');
 
-let ContactForm = require('./contact-form');
+let ContactForm    = require('./contact-form');
 
 let ContactInfo = React.createClass({
+  path: 'account/contact-info/index',
 
   getInitialState() {
     return {};

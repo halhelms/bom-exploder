@@ -6,7 +6,6 @@ var ResultsConstants = require('../../../../../constants/results/constants');
 var Actions = {
 
   setAllMatchesForBomPartFromDistributor(bom_part_number, distributor_id) {
-    console.log('from within matched-parts/all-distributors/each-match/actions', bom_part_number, distributor_id)
     AppDispatcher.handleViewAction(
       {
         actionType: ResultsConstants.SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DO,

@@ -2,88 +2,98 @@
 
 // I am responsible for displaying the 'Matching Results' area. 
 
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-let TempStore                           = require('../../../stores/TempStore');
+let TempStore                                         = require('../../../stores/TempStore');
 // ACTIONS
-// let ???Actions                       = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
 
-let SingleDistributorMatchedBomPartView = require('./single-distributor/matched-bom-part-view');
-let AllDistributorsMatchedBomPartsView  = require('./all-distributors/matched-bom-parts-view');
+let SingleDistributorMatchedBomPartView               = require('./single-distributor/matched-bom-part-view');
+let AllDistributorsMatchedBomPartsView                = require('./all-distributors/matched-bom-parts-view');
 
-let SingleDistributorTitle              = require('./single-distributor/title');
-let AllDistributorsTitle                = require('./all-distributors/title');
+let SingleDistributorTitle                            = require('./single-distributor/title');
+let AllDistributorsTitle                              = require('./all-distributors/title');
 
 let MatchedPartsIndex = React.createClass({
+  path: 'results/matched-parts/index',
 
   propTypes: {
 
   },
 
-  getInitialState() {
+  getInitialState(args) {
     return {
       percent_selected: 0,
       total_target_price: 0,
       total_selected_price: 0,
-      view_mode: {
-        distributor_id: null,
-        distributor_name: null,
-        bom_part_number: null
-      }
+      all_distributor_mode: true,
+      single_distributor_id: null,
+      single_distributor_name: null,
+      bom_part_number: null
     };
   },
 
-  getDefaultProps() {
+  getDefaultProps(args) {
     return {
     };
   },
 
-  componentWillMount() {
+  componentWillMount(args) {
     this.setState({percent_selected: TempStore.getPercentSelected()});
     this.setState({total_target_price: TempStore.getTotalTargetPrice()});
     this.setState({total_selected_price: TempStore.getTotalSelectedPrice()});
   },
 
-  componentDidMount() {
+  componentDidMount(args) {
     TempStore.addChangeListener(this.onTempStoreChange);
   },
 
-  componentDidUnmount() {
+  componentWillUpdate: function(nextProps, nextState) {
+  },
 
+  componentDidUnmount(args) {
   },
 
   onTempStoreChange(args) {
-    console.log('args from onTempStoreChange in results/index.jsx', args)
     this[args.action_data.subsequent_action](args);
-
   },
 
+  // functions in ALL_CAPS correspond to anticipated subsequent_action received from
+  // store change listeners
   SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE(args) {
-    console.log( 'SET_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_DONE within index')
+    this.setState({single_distributor_name: args.action_data.distributor_name});
+    this.setState({bom_part_number: args.action_data.bom_part_number});
+    this.setState({all_distributor_mode: false});
+  },
+
+  EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DONE(args) {
+    this.setState({all_distributor_mode: true});
   },
 
   render() {
-
+    who.call(this);
     // Start by declaring a null view and title
     let view = null;
     let title = null;
 
     // If we're in 'all distributors'  mode...
-    if (!this.state.view_mode.single_distributor_id) {
+    // maybe refactor to switch statement
+    if (this.state.all_distributor_mode) {
       view  = <AllDistributorsMatchedBomPartsView />;
-      title = <AllDistributorsTitle />
+      title = <AllDistributorsTitle />;
     
     } else {
-        // we must be in 'single distributor' view
-      view = <SingleDistributorMatchedBomPartView 
-        bom_part_id={this.state.view_mode.bom_part_id} 
-        distributor_name={this.state.view_mode.distributor_name} />
+      // we must be in 'single distributor' view
+      // when the appropriate store is notified that we're switching to a single distributor,
+      // it should already have the info available to it so there's no need to hold that
+      // info here
+      view = <SingleDistributorMatchedBomPartView />;
       title = <SingleDistributorTitle 
-        distributor_name={this.state.view_mode.distributor_name} 
-        bom_part_number={this.state.view_mode.bom_part_number} />
+        distributor_name={this.state.single_distributor_name} 
+        bom_part_number={this.state.bom_part_number} />;
     }
 
     return (

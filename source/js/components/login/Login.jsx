@@ -1,14 +1,12 @@
 
 'use strict'
-var React        = require('react');
-
-var Router       = require('react-router'); // or var Router = ReactRouter; in browsers
-var Link         = Router.Link;
-var LoginActions = require('../actions/LoginActions');
-var LoginStore   = require('../stores/LoginStore');
+var React          = require('react');
+let {Router, Link} = require('react-router');
+var LoginActions   = require('../actions/LoginActions');
+var LoginStore     = require('../stores/LoginStore');
 
 module.exports = React.createClass({
-    displayName: 'Login',
+    path: 'Login',
 
     getInitialState() {
       return {

@@ -1,19 +1,17 @@
 'use strict'
-let React           = require('react');
-let PureRenderMixin = require('react/addons').addons.PureRenderMixin;
+let React          = require('react');
 
-let Router          = require('react-router');
-let Link            = Router.Link;
+let {Router, Link} = require('react-router');
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions = require('../../actions/Actions');
 // REACT COMPONENTS
 
 
 let ContactForm = React.createClass({
-  mixins: [PureRenderMixin],
+  path: 'account/contact-info/contact-form',
 
   getInitialState() {
     return {};

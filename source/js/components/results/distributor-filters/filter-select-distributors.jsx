@@ -1,15 +1,16 @@
 'use strict'
-let React = require('react');
+let React             = require('react');
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store          = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions        = require('../../actions/Actions');
 // REACT COMPONENTS
 let DistributorColumn = require('./distributor-column');
-let TempStore      = require('../../../stores/TempStore');
+let TempStore         = require('../../../stores/TempStore');
 
 let FilterSelectDistributors = React.createClass({
+  path: 'results/distributor-filters/filter-select-distributors',
 
   getInitialState() {
     return {};

@@ -1,13 +1,13 @@
 'use strict'
 let React = require('react');
 // React Router
-let Router       = require('react-router');
-let Link         = Router.Link;
+let {Router, Link} = require('react-router');
 // React components
 let BomList = require('./bom-list');
 // Bootstrap components
 
 let BomIndex = React.createClass({
+  path: 'boms/index',
 
   getInitialState() {
     return {};

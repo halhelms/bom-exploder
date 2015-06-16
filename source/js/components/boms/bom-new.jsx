@@ -1,14 +1,15 @@
 'use strict'
-let React = require('react');
+let React      = require('react');
 
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store   = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions = require('../../actions/Actions');
 // REACT COMPONENTS
-let BomAdd = require('./bom-add');
+let BomAdd     = require('./bom-add');
 
 let BomNew = React.createClass({
+  path: 'boms/bom-new',
 
   getInitialState() {
     return {};

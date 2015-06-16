@@ -1,18 +1,18 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
-let Router = require('react-router');
-let Link   = Router.Link;
-
+let {Router, Link}                                    = require('react-router');
 // STORES
-// let ???Store = require('../../stores/???Store');
+// let Store                                          = require('../../stores/Store');
 // ACTIONS
-// let ???Actions = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
-let TempStore = require('../../stores/TempStore');
+let TempStore                                         = require('../../stores/TempStore');
 
 let Email = React.createClass({
+  path: 'inbox/email-view',
+
   propTypes: {
     params: object
   },

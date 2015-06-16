@@ -1,14 +1,15 @@
 'use strict'
-let React = require('react');
+let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // STORES
-let TempStore = require('../../../../../stores/TempStore');
+let TempStore                                         = require('../../../../../stores/TempStore');
 // ACTIONS
-let ResultsActions = require('../../../../../actions/results/matched-parts/all-distributors/each-match/actions');
+let EachMatchActions                                  = require('../../../../../actions/results/matched-parts/all-distributors/each-match/actions');
 // REACT COMPONENTS
 
 let MatchedPartDetail = React.createClass({
+  path: 'results/matched-parts/all-distributors/each-match/detail',
 
   propTypes: {
     matched_part: object.isRequired,
@@ -33,12 +34,16 @@ let MatchedPartDetail = React.createClass({
   
   },
 
+  componentWillUpdate: function(nextProps, nextState) {
+    console.log('componentWillUpdate in detail', nextProps, nextState);
+  },
+
   componentDidUnmount() {
 
   },
 
   moreMatchingParts() {
-    ResultsActions.setAllMatchesForBomPartFromDistributor(this.props.bom_part_number, this.props.distributor_id);
+    EachMatchActions.setAllMatchesForBomPartFromDistributor(this.props.bom_part_number, this.props.distributor_id);
   },
 
   render() {

@@ -7,15 +7,15 @@ let {array, bool, func, number, object, string, node} = React.PropTypes;
 // STORES
 let TempStore                                         = require('../../../../stores/TempStore');
 // ACTIONS
-// let ???Actions                                     = require('../../actions/???Actions');
+// let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
 let PriceBreak                                        = require('./price-break');
 
 
 let SingleDistributorMatchedBomPartView = React.createClass({
+  path: 'results/matched-parts/single-distributor/matched-bom-part-view',
+
   propTypes: {
-    bom_id        : string.isRequired,
-    distributor_id: string.isRequired
   },  
 
   getInitialState() {
@@ -28,7 +28,8 @@ let SingleDistributorMatchedBomPartView = React.createClass({
   },
 
   componentWillMount() {
-    this.setState({matched_parts_details: TempStore.getMatchedPartsDetails(this.props.bom_id, this.props.distributor_id)});
+    // the store will already know this information so no need to send it anything
+    this.setState({distributor_matches_for_bom_part: TempStore.getDistributorMatchesForBomPart()});
   },
 
   componentDidMount() {
@@ -40,7 +41,8 @@ let SingleDistributorMatchedBomPartView = React.createClass({
   },
 
   render() {
-    let matched_parts_rows = this.state.matched_parts_details.matched_parts.map((matched_part_detail, i) => {
+    who.call(this);
+    let matched_parts_rows = this.state.distributor_matches_for_bom_part.matched_parts.map((matched_part_detail, i) => {
       return (
         <tr key={i}>
           <td>{matched_part_detail.part_number}</td>

@@ -1,13 +1,14 @@
 'use strict'
 
-let Router       = require('react-router');
-let Link         = Router.Link;
+let {Router, Link} = require('react-router');
 
-let React = require('react');
-let PartSearcher = require('./part-searcher');
+let React          = require('react');
+let PartSearcher   = require('./part-searcher');
 
 
 let Header = React.createClass({
+  path: 'header/index',
+  
   render() {
     return (
       <div className="header row">
