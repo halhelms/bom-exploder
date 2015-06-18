@@ -1,19 +1,19 @@
 'use strict'
-let AppDispatcher = require('../dispatcher/AppDispatcher');
-let EventEmitter  = require('events').EventEmitter;
-let assign        = require('../../../node_modules/object-assign');
+let AppDispatcher           = require('../dispatcher/AppDispatcher');
+let EventEmitter            = require('events').EventEmitter;
+let assign                  = require('../../../node_modules/object-assign');
 EventEmitter.prototype.vars = {};
 
-let ResultsConstants = require('../constants/results/constants');
+let ResultsConstants        = require('../constants/results/constants');
 
-let CHANGE_EVENT = 'CHANGE';
+let CHANGE_EVENT            = 'CHANGE';
 
 let TempStore = assign({}, EventEmitter.prototype, {
   
   getEmailItem(id) {
     let found_inbox_item = null;
     this.state.inbox_items.forEach((inbox_item, i) => {
-      if (inbox_item.id === id) {
+      if (parseInt(inbox_item.id) === parseInt(id)) {
         found_inbox_item = inbox_item; 
       }
     });

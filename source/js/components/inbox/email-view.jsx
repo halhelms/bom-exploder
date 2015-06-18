@@ -9,6 +9,7 @@ let {Router, Link}                                    = require('react-router');
 // let Actions                                        = require('../../actions/Actions');
 // REACT COMPONENTS
 let TempStore                                         = require('../../stores/TempStore');
+let Reply                                             = require('./Reply');
 
 let Email = React.createClass({
   path: 'inbox/email-view',
@@ -18,7 +19,9 @@ let Email = React.createClass({
   },
 
   getInitialState() {
-    return {};
+    return ({
+      with_reply: false,
+    });
   },
 
   getDefaultProps() {
@@ -37,7 +40,19 @@ let Email = React.createClass({
   
   },
 
+  reply() {
+    this.setState({with_reply: true});
+  },
+
+  submitReply(args) {
+    console.log('args: ', args)
+    console.log('Reply: ', this.refs.reply.state.reply_message);
+  },
+
   render() {
+    who.call(this);
+    let reply = this.state.with_reply ? <Reply onSubmitForm = {this.submitReply} ref='reply' /> : "";
+
     return (
       <div>
         <div className='panel panel-primary'>
@@ -70,10 +85,11 @@ let Email = React.createClass({
             <div className='col-md-5'>
               <br />
               <button type="button" className="btn btn-primary margin-right-6">Accept this quote</button>
-              <button type="button" className="btn btn-primary margin-left-6">Reply</button>
+              <button type="button" className="btn btn-primary margin-left-6" onClick={this.reply}>Reply</button>
             </div>
           </div>
           <br />
+          {reply}
         </div>
       </div>
     );

@@ -6,7 +6,6 @@ var ResultsConstants = require('../../../../constants/results/constants');
 var Actions = {
 
   exitAllMatchesForBomPartFromDistributorMode() {
-    console.log('from within matched-parts/single-distributor/actions')
     AppDispatcher.handleViewAction(
       {
         actionType: ResultsConstants.EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DO,

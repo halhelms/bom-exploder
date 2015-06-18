@@ -34,6 +34,8 @@ let InboxIndex = React.createClass({
   },
 
   render() {
+    who.call(this);
+    
     let inboxItems = this.state.inbox_items.map((inbox_item, i) => {
       return (
         <InboxItem item={inbox_item} key={i}/>

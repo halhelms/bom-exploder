@@ -49,8 +49,8 @@ let SingleDistributorMatchedBomPartView = React.createClass({
           <td>{matched_part_detail.manufacturer}</td>
           <td>{matched_part_detail.description}</td>
           <td>
-            {matched_part_detail.price_breaks.forEach((price_break, j) => {
-              <PriceBreak price_break={price_break} />
+            {matched_part_detail.price_breaks.map((price_break, j) => {
+              return <PriceBreak price_break={price_break} key={j} />
             })}
           </td>
           <td>{matched_part_detail.qoh}</td>

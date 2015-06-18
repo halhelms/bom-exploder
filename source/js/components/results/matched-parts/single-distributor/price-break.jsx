@@ -37,10 +37,10 @@ let PriceBreak = React.createClass({
   },
 
   render() {
-
+    let to_price = this.props.price_break.to === 1000000 ? "..." : this.props.price_break.to;
     return (
       <div>
-        {this.props.price_break.from} - {this.props.price_break.to} : {this.props.price_break.price}
+        <div className='inline text-right width-90'>{this.props.price_break.from} - {to_price}</div> <div className='inline text-left'>{this.props.price_break.price}</div>
       </div>
     );
   }

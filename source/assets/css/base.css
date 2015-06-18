@@ -7,6 +7,10 @@
   padding-top: 6px;
 }*/
 
+* {
+  /*box-shadow: 0 0 1px 0px #f00;*/
+}
+
 .container, .container-fluid {
   padding-top: 16px;
 }
@@ -103,6 +107,14 @@ label.light {
   width: 30px;
 }
 
+.width-45 {
+  width: 45px;
+}
+
+.width-60 {
+  width: 60px;
+}
+
 .width-90 {
   width: 90px;
 }
@@ -123,7 +135,7 @@ label.light {
   width: 210px;
 }
 
-.bordered {
+.deprecated-bordered {
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
