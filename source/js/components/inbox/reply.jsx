@@ -1,6 +1,8 @@
 'use strict'
 let React                                             = require('react');
 let {array, bool, func, number, object, string, node} = React.PropTypes;
+let assign                  = require('../../../../node_modules/object-assign');
+
 
 let {Router, Link}                                    = require('react-router');
 // STORES
@@ -39,8 +41,7 @@ let Reply = React.createClass({
 
   submitForm(e) {
     e.preventDefault();
-    this.setState({reply_message: React.findDOMNode(this.refs.replyMessage).value});
-    this.props.onSubmitForm();
+    this.props.onSubmitForm({replyMessage: React.findDOMNode(this.refs.replyMessage).value});
   },
 
   render() {

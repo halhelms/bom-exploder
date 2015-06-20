@@ -4,6 +4,358 @@
 		"selected_items":
 		[
 			[
+				"SET",
+				"SET_CAMPAIGN_DONE"
+			],
+			[
+				"SET_CAM",
+				"SET_CAMPAIGN_DO"
+			],
+			[
+				"account",
+				"account_selections"
+			],
+			[
+				"get",
+				"getCampaignsForAccount"
+			],
+			[
+				"rep",
+				"Reply"
+			],
+			[
+				"com",
+				"componentWillUpdate"
+			],
+			[
+				"nex",
+				"nextState"
+			],
+			[
+				"next",
+				"nextProps"
+			],
+			[
+				"comp",
+				"componentWillUpdate"
+			],
+			[
+				"co",
+				"componentWillUpdate"
+			],
+			[
+				"acti",
+				"action_data"
+			],
+			[
+				"sing",
+				"single_distributor_name"
+			],
+			[
+				"found",
+				"found_distributor_name"
+			],
+			[
+				"distrib",
+				"distributor_id"
+			],
+			[
+				"dis",
+				"distributors"
+			],
+			[
+				"distri",
+				"distributor_id"
+			],
+			[
+				"distr",
+				"distributor_id"
+			],
+			[
+				"distributor_",
+				"distributor_matches_for_bom_part"
+			],
+			[
+				"CHA",
+				"CHANGE_EVENT"
+			],
+			[
+				"va",
+				"value2"
+			],
+			[
+				"bom",
+				"bom_part_id"
+			],
+			[
+				"bom_part",
+				"bom_part_number"
+			],
+			[
+				"dist",
+				"distributor_id"
+			],
+			[
+				"matched",
+				"matched_parts"
+			],
+			[
+				"to",
+				"total_selected_price"
+			],
+			[
+				"tota",
+				"total_target_price"
+			],
+			[
+				"total",
+				"total_selected_price"
+			],
+			[
+				"Single",
+				"SingleDistributorMatchedBomPartView"
+			],
+			[
+				"AllDi",
+				"AllDistributorsMatchedBomPartsView"
+			],
+			[
+				"all",
+				"all_distributors_view"
+			],
+			[
+				"single",
+				"single_distributor"
+			],
+			[
+				"matched_p",
+				"matched_part_detail"
+			],
+			[
+				"matched_pa",
+				"matched_parts_rows"
+			],
+			[
+				"match",
+				"matched_parts_details"
+			],
+			[
+				"matched_parts",
+				"matched_part_details_view"
+			],
+			[
+				"res",
+				"results_mode"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"Lis",
+				"ListHeading"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"col-",
+				"col-md-4"
+			],
+			[
+				"price",
+				"price_difference"
+			],
+			[
+				"tot",
+				"total_target_price"
+			],
+			[
+				"mat",
+				"matched_part"
+			],
+			[
+				"req",
+				"required_quantity"
+			],
+			[
+				"part",
+				"part_number"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"bord",
+				"border-top"
+			],
+			[
+				"pan",
+				"panel-body"
+			],
+			[
+				"col",
+				"col-md-3"
+			],
+			[
+				"High",
+				"HighlightQuotedPrice"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"che",
+				"checkboxes"
+			],
+			[
+				"check",
+				"checkboxes"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"pa",
+				"panel-primary"
+			],
+			[
+				"widt",
+				"max-width"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"f",
+				"font-style"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"Accou",
+				"AccountIndex"
+			],
+			[
+				"form",
+				"form-group"
+			],
+			[
+				"col-md",
+				"col-md-2"
+			],
+			[
+				"web",
+				"webpack-dev-server"
+			],
+			[
+				"ht",
+				"http-equiv	Attr"
+			],
+			[
+				"boo",
+				"bootstrap"
+			],
+			[
+				"d",
+				"distributor"
+			],
+			[
+				"Dis",
+				"DistributorsStore"
+			],
+			[
+				"Mat",
+				"MatchedCell"
+			],
+			[
+				"Sele",
+				"SelectionOverview"
+			],
+			[
+				"Par",
+				"PartSearchForm"
+			],
+			[
+				"Match",
+				"MatchedTable"
+			],
+			[
+				"Filt",
+				"FilterByDistributors"
+			],
+			[
+				"Di",
+				"DistributorsForBOM"
+			],
+			[
+				"Distrib",
+				"DistributorsStore"
+			],
+			[
+				"chek",
+				"checkbox"
+			],
+			[
+				"Distru",
+				"DistributorsStore"
+			],
+			[
+				"Dist",
+				"DistributorsActions"
+			],
+			[
+				"action",
+				"actionType"
+			],
+			[
+				"di",
+				"distributor_id"
+			],
+			[
+				"han",
+				"handleIndividualCheckboxClick"
+			],
+			[
+				"hand",
+				"handleAllClick"
+			],
+			[
+				"quot",
+				"quoting_checked"
+			],
+			[
 				"Product",
 				"ProductStore"
 			],
@@ -36,14 +388,6 @@
 				"className"
 			],
 			[
-				"dis",
-				"Distributors"
-			],
-			[
-				"distri",
-				"distributor"
-			],
-			[
 				"ta",
 				"targetQty"
 			],
@@ -54,10 +398,6 @@
 			[
 				"tar",
 				"targetPrice"
-			],
-			[
-				"get",
-				"getDefaultProps"
 			],
 			[
 				"distributor-p",
@@ -76,24 +416,12 @@
 				"isQuoted"
 			],
 			[
-				"quot",
-				"quotedIcon"
-			],
-			[
 				"quotedIc",
 				"quotedIconImageSource"
 			],
 			[
-				"Dist",
-				"DistributorPartSummary"
-			],
-			[
 				"low",
 				"lowestPriceIcon"
-			],
-			[
-				"to",
-				"totalTargetPrice"
 			],
 			[
 				"meta-",
@@ -102,10 +430,6 @@
 			[
 				"meta",
 				"meta-header-detail"
-			],
-			[
-				"dist",
-				"distributorCheckboxes"
 			],
 			[
 				"sort",
@@ -118,10 +442,6 @@
 			[
 				"Distribut",
 				"DistributorCheckbox"
-			],
-			[
-				"che",
-				"checked"
 			],
 			[
 				"filt",
@@ -159,6 +479,57 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/index.jsx",
+			"settings":
+			{
+				"buffer_size": 756,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/account.jsx",
+			"settings":
+			{
+				"buffer_size": 1238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/campaign.jsx",
+			"settings":
+			{
+				"buffer_size": 738,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "'use strict'\nlet AppDispatcher           = require('../dispatcher/AppDispatcher');\nlet EventEmitter            = require('events').EventEmitter;\nlet assign                  = require('../../../node_modules/object-assign');\nEventEmitter.prototype.vars = {};\n\nlet Constants               = require('../constants/constants');\n\nlet CHANGE_EVENT            = 'CHANGE';\nlet api                     = require('../api-utils/api-utils');\n\nlet Store = assign({}, EventEmitter.prototype, {\n\n  state: {\n\n  },\n\n  getState() {\n    return this.state;\n  },\n\n  addChangeListener(callback) {\n    this.on(CHANGE_EVENT, callback );\n  },\n\n  removeChangeListener(callback) {\n    this.removeListener(CHANGE_EVENT, callback);\n  },\n\n  setState(obj) {\n    assign(this.state, obj);\n  },\n\n\n\n  getAccountNames() {\n    return api.getAccountNames();\n  },\n\n  getCampaignsForAccount(accountName) {\n    console.log('accountName ', accountName)\n    return api.getCampaignsForAccount(accountName);\n  },\n\n\n});\n\n// Register for Actions\n\nAppDispatcher.register(function(payload){\n  switch (payload.action.actionType) {\n    case ResultsConstants.SET_ACCOUNT_DO:\n      payload.action.data.subsequent_action = ResultsConstants.SET_ACCOUNT_DONE;\n      Store.setState({action_data: payload.action.data});\n      break;\n\n    case ResultsConstants.EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DO:\n      payload.action.data.subsequent_action = ResultsConstants.EXIT_ALL_MATCHES_FOR_BOM_PART_FROM_DISTRIBUTOR_MODE_DONE;\n      TempStore.setState({action_data: payload.action.data});\n      break;\n  }\n});\n\nmodule.exports = Store;\n",
+			"file": "/Users/halhelms/time-boxer/source/js/stores/store.js",
+			"file_size": 1705,
+			"file_write_time": 130791421390000000,
+			"settings":
+			{
+				"buffer_size": 1586,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/halhelms/time-boxer/source/js/api-utils/api-utils.js",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/halhelms/time-boxer/source/js/constants/constants.js",
+			"settings":
+			{
+				"buffer_size": 231,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -167,10 +538,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 287.0,
+		"height": 367.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
 			[
 				"Snippet: ",
 				"Snippet: object getInitialState()"
@@ -188,7 +571,7 @@
 				"Project: Save As"
 			]
 		],
-		"width": 593.0
+		"width": 602.0
 	},
 	"console":
 	{
@@ -209,63 +592,162 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/halhelms/bom-exploder"
+		"/Users/halhelms/time-boxer",
+		"/Users/halhelms/time-boxer/source",
+		"/Users/halhelms/time-boxer/source/js",
+		"/Users/halhelms/time-boxer/source/js/api-utils",
+		"/Users/halhelms/time-boxer/source/js/components",
+		"/Users/halhelms/time-boxer/source/js/components/context-chooser",
+		"/Users/halhelms/time-boxer/source/js/constants",
+		"/Users/halhelms/time-boxer/source/js/stores"
 	],
 	"file_history":
 	[
-		"/Users/halhelms/Attempt1/scripts/App.js",
-		"/Users/halhelms/Attempt1/scripts/components/Explore.js",
-		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/components/Quiz.jsx",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/utils/PeopleFetcher.js",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/stores/PeopleStore.js",
-		"/Users/halhelms/learning-flux/alt-tutorial/index.html",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/App.jsx",
-		"/Users/halhelms/alt-tutorial/src/stores/FavoritesStore.js",
-		"/Users/halhelms/alt-tutorial/src/components/Quiz.jsx",
-		"/Users/halhelms/alt-tutorial/src/App.jsx",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/utils/GeneralUtils.js",
-		"/Users/halhelms/alt-tutorial/src/utils/GeneralUtils.js",
-		"/Users/halhelms/alt-tutorial/src/components/Locations.jsx",
-		"/Users/halhelms/learning-flux/alt-tutorial/src/actions/PeopleActions.js",
-		"/Users/halhelms/learning-flux/alt-tutorial/package.json",
-		"/Users/halhelms/alt-tutorial/src/actions/LocationActions.js",
-		"/Users/halhelms/alt-tutorial/src/utils/LocationsFetcher.js",
-		"/Users/halhelms/alt-tutorial/src/stores/LocationStore.js",
+		"/Users/halhelms/time-boxer/source/js/constants/constants.js",
+		"/Users/halhelms/time-boxer/source/js/stores/store.js",
+		"/Users/halhelms/time-boxer/index.jsx",
+		"/Users/halhelms/time-boxer/source/js/api-utils/api-utils.js",
+		"/Users/halhelms/time-boxer/source/js/components/tweet-schedule.jsx",
+		"/Users/halhelms/time-boxer/source/js/components/context-chooser/index.jsx",
+		"/Users/halhelms/time-boxer/source/js/components/context-chooser/account.jsx",
+		"/Users/halhelms/time-boxer/source/js/components/context-chooser/campaign.jsx",
+		"/Users/halhelms/time-boxer/source/js/scripts/utils.js",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/email-view.jsx",
+		"/Users/halhelms/time-boxer/source/js/components/_COMPONENT.jsx",
+		"/Users/halhelms/time-boxer/webpack.config.js",
+		"/Users/halhelms/time-boxer/index.html",
+		"/Users/halhelms/time-boxer/package.json",
 		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/halhelms/react-training/learn.html",
-		"/Users/halhelms/learning-flux/alt.js",
-		"/Users/halhelms/learning-flux/stores/LocationStore.js",
-		"/Users/halhelms/learning-flux/components/Locations.jsx",
-		"/Users/halhelms/alt-tutorial/README.md",
-		"/Users/halhelms/learning-flux/actions/LocationActions.js",
-		"/Users/halhelms/Google Drive/BOM-exploder/invariant.js",
-		"/Users/halhelms/Google Drive/BOM-exploder/index.html",
-		"/Users/halhelms/Google Drive/BOM-exploder/dispatcher.js",
-		"/Users/halhelms/react-training/react-training/subjects/02-rendering/exercise.js",
-		"/Users/halhelms/react-training/react-training/subjects/03-components/exercise.js",
-		"/Users/halhelms/Desktop/scratch.html",
-		"/Users/halhelms/rails-apps/test-api/Gemfile",
-		"/Users/halhelms/rails-apps/test-api/app/models/attendance.rb",
-		"/Users/halhelms/rails-apps/test-api/config/database.yml",
-		"/Users/halhelms/rails-apps/chuy/db/migrate/20131208212630_create_chuy_coupons.rb",
-		"/Users/halhelms/rails-apps/chuy/test/dummy/config/database.yml",
-		"/Users/halhelms/rails-apps/chuy/test/dummy/config/routes.rb",
-		"/Users/halhelms/rails-apps/chuy/app/controllers/chuy/coupons_controller.rb",
-		"/Users/halhelms/rails-apps/chuy/config/routes.rb",
-		"/Users/halhelms/rails-apps/chuy/app/models/chuy/company.rb",
-		"/Users/halhelms/rails-apps/chuy/app/models/chuy/coupon.rb",
-		"/Users/halhelms/rails-apps/chuy/Gemfile"
+		"/Users/halhelms/time-boxer/source/js/components/goals/index.jsx",
+		"/Users/halhelms/time-boxer/source/js/components/goals/shift-goal-input.jsx",
+		"/Users/halhelms/bom-exploder/source/js/stores/TempStore.js",
+		"/Users/halhelms/bom-exploder/source/assets/css/base.css",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/reply.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/single-distributor/price-break.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/single-distributor/matched-bom-part-view.jsx",
+		"/Users/halhelms/bom-exploder/source/js/scripts/utils.js",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/index.jsx",
+		"/Users/halhelms/bom-exploder/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/matched-parts/single-distributor/actions.js",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/all-distributors/matched-bom-parts-view.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/account/contact-info/contact-form.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/account/contact-info/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/account/distributor-settings/distributor-form.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/account/distributor-settings/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/bom-add-edit-form.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/bom-add.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/bom-edit.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/bom-list.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/bom-new.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/part-mapper/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/boms/part-mapper/part-mapper-list.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/footer/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/header/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/header/part-searcher.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/list-heading.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/list-item.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/login/Login.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/bom-parts/bom-part-detail.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/bom-parts/bom-parts-header.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/bom-parts/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/distributor-column.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/filter-all.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/filter-distributors.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/filter-quoting.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/filter-select-distributors.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/hide-selected-parts.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/highlight-lowest-price.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/highlight-quoted-price.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/all-distributors/each-match/column.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/all-distributors/each-match/detail.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/all-distributors/each-match/header.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/all-distributors/title.jsx",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/matched-parts/all-distributors/each-match/actions.js",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/single-distributor/title.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/selection-overview/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/constants/results/constants.js",
+		"/Users/halhelms/bom-exploder/source/js/stores/package.json",
+		"/Users/halhelms/bom-exploder/package.json",
+		"/Users/halhelms/bom-exploder/source/js/constants/bom-constants.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/all-distributors/actions.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/matched-parts/all-distributors/actions.js",
+		"/Users/halhelms/bom-exploder/__tests__/sum-test.js",
+		"/Users/halhelms/bom-exploder/source/js/_temp/sum.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/_ACTIONS.js",
+		"/Users/halhelms/bom-exploder/source/js/stores/_STORE.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/distributors-filter.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/results/general.js",
+		"/Users/halhelms/bom-exploder/source/js/components/_COMPONENT.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/titles/all-distributors-title.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/titles/single-distributor-title.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/price-break.jsx",
+		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/halhelms/bom-exploder/source/js/components/_temp/AllQuoting.jsx",
+		"/Users/halhelms/bom-exploder/source/js/_temp/BuyerStore.js",
+		"/Users/halhelms/bom-exploder/source/js/components/inbox/inbox-list-item.jsx",
+		"/Users/halhelms/bom-exploder/source/js/api-utils/api-utils.js",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/matched-part-detail.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/matched-parts-column.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/matched-parts/matched-parts-header.jsx",
+		"/Users/halhelms/bom-exploder/source/assets/css/opentip.css",
+		"/Users/halhelms/bom-exploder/index.html",
+		"/Users/halhelms/bom-exploder/source/assets/js/opentip.js",
+		"/Users/halhelms/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/halhelms/bom-exploder/source/js/components/foundation/Checkbox.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/_temp/BomMatrix.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/_temp/Test.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/selection-overview/index.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor-filters/index.jsx",
+		"/Users/halhelms/bom-exploder/source/assets/css/bootstrap/css/bootstrap.css",
+		"/Users/halhelms/bom-exploder/source/assets/css/bootstrap/css/original_bootstrap.css",
+		"/Users/halhelms/bom-exploder/node_modules/bootstrap/dist/css/bootstrap.css",
+		"/Users/halhelms/bom-exploder/webpack.config.js",
+		"/Users/halhelms/bom-exploder/source/js/components/account/index.jsx",
+		"/Users/halhelms/bom-exploder/source/assets/css/bootstrap/config.json",
+		"/Users/halhelms/bom-exploder/source/js/constants/results-constants.js",
+		"/Users/halhelms/bom-exploder/source/js/constants/login-constants.js",
+		"/Users/halhelms/bom-exploder/source/js/constants/cart-constants.js",
+		"/Users/halhelms/bom-exploder/source/js/constants/distributors-constants.js",
+		"/Users/halhelms/bom-exploder/dist/js/bundle.js",
+		"/Users/halhelms/bom-exploder/source/js/components/pages/ResultsWorksheetPage.jsx",
+		"/Users/halhelms/bom-exploder/source/js/stores/BOMMatcherStore.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/BOMResultsActions.js",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor_filters/DistributorsFilter.jsx",
+		"/Users/halhelms/bom-exploder/source/js/components/results/distributor_filters/FilterByDistributors.jsx",
+		"/Users/halhelms/bom-exploder/source/js/stores/DistributorsStore.js",
+		"/Users/halhelms/bom-exploder/source/js/actions/DistributorsActions.js",
+		"/Users/halhelms/bom-exploder/source/js/components/account/ExistingBoms.jsx",
+		"/Users/halhelms/bom-exploder/source/js/actions/BOMActions.js",
+		"/Users/halhelms/bom-exploder/source/js/components/pages/TestPage.jsx",
+		"/Users/halhelms/bom-exploder/dispatcher/AppDispatcher.js",
+		"/Users/halhelms/bom-exploder/stores/LoginStore.js",
+		"/Users/halhelms/bom-exploder/stores/_STORE.js",
+		"/Users/halhelms/bom-exploder/stores/BOMStore.js",
+		"/Users/halhelms/bom-exploder/stores/BuyerStore.js",
+		"/Users/halhelms/bom-exploder/stores/CartStore.js",
+		"/Users/halhelms/bom-exploder/stores/DistributorsStore.js",
+		"/Users/halhelms/bom-exploder/stores/BOMMatcherStore.js",
+		"/Users/halhelms/bom-exploder/stores/BOMPartsStore.js"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/halhelms/time-boxer/source/",
+			"/Users/halhelms/time-boxer/source/js/",
+			"/Users/halhelms/time-boxer/source/js/components/",
+			"/Users/halhelms/bom-exploder/source/js/components/",
+			"/Users/halhelms/bom-exploder",
+			"/Users/halhelms/bom-exploder/source/js/components/",
+			"/Users/halhelms/bom-exploder",
 			"/Users/halhelms/learning-flux/alt-tutorial",
 			"/Users/halhelms/alt-tutorial",
 			"/Users/halhelms/learning-flux/alt-tutorial/src"
@@ -276,6 +758,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"console.log",
+			"tweet",
+			"this.state.single_distributor_name",
+			"displayName",
+			"from within",
+			"from within ma",
+			"args sent to",
+			"???",
+			"EventEmitter",
+			"console.log",
+			"???",
+			"console.log",
+			"standard",
+			"console.log",
+			"console.log(this.state.results.bom_parts);",
+			"bom_part.distributors.forEach(function",
+			"bom_part.distributors.forEach(function(di",
+			"debugger",
+			"distributor_id",
+			"distributor_name",
+			": function",
+			"thx",
+			"map",
+			"MatchedTable",
+			"Checkbox",
+			"DistributorCon",
+			"DistributorAc",
+			"getDis",
+			"MatrixActions.getDis",
 			"LocationActions",
 			"clone",
 			"getLocation",
@@ -287,6 +798,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"path",
+			"",
+			"id",
+			"name",
+			"\"distributor_name\"",
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -297,8 +814,545 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/index.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 756,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/account.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								627,
+								627
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/halhelms/time-boxer/source/js/components/context-chooser/campaign.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								608,
+								608
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/halhelms/time-boxer/source/js/stores/store.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1209,
+								1209
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/halhelms/time-boxer/source/js/api-utils/api-utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								862,
+								862
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/halhelms/time-boxer/source/js/constants/constants.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -341,7 +1395,7 @@
 	"project": "bom-exploder.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -379,7 +1433,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 180.0,
+	"side_bar_width": 202.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
