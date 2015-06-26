@@ -46,6 +46,8 @@ let App = React.createClass({
 
   render() {
     who.call(this);
+
+    console.log('params', this.props.params)
     return (
       <div>
         <Header/>
