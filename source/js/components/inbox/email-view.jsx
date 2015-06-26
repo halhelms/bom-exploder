@@ -46,7 +46,8 @@ let Email = React.createClass({
 
   submitReply(args) {
     console.log('args: ', args)
-    console.log('Reply: ', this.refs.reply.state.reply_message);
+    console.log('Reply: ', args.replyMessage);
+    this.setState({with_reply: false});
   },
 
   render() {
