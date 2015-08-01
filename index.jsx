@@ -7,7 +7,7 @@ let {array, bool, func, number, object, string, node} = React.PropTypes;
 
 // REACT COMPONENTS
 let BomIndex            = require('./source/js/components/boms/index');
-
+let Results             = require('./source/js/components/results/index');
 
 
 // var BomMatrix = require('./components/BomMatrix');
@@ -48,6 +48,7 @@ let App = React.createClass({
 // The routes need to go AFTER the App
 let routes = (
   <Route   name           ="app" path="/"         handler={App}>
+    <Route name="results" path="results/:id" handler={Results} />
   </Route>
 );
 
