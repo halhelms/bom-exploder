@@ -19,7 +19,14 @@ var n = this,
  };
 
  who = function() {
-  console.log(this.__proto__.constructor.displayName + ' @ ' + this.__proto__.path);
+  var displayNameLength = this.__proto__.constructor.displayName.length;
+  var maxLength = 24;
+  var spacingLength = maxLength - displayNameLength;
+  var spacing = '';
+  for (var i=0; i<spacingLength; i++) {
+    spacing += " ";
+  }
+  console.log('%c ⭐️ ' +this.__proto__.constructor.displayName + spacing + ' @ ' + window.appRoot + this.__proto__.path, 'color:green');
  }
 
  clear = function() {
